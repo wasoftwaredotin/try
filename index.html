@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Jaipur | The Royal Hub of Innovation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts (Added 'Kalam' for readable handwriting) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cinzel:wght@400;600;700&family=Josefin+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jaipur: {
+                            pink: '#d66d75', // Terra Cotta
+                            light: '#e29587', // Lighter Pink
+                            deep: '#b3404a', // Deep Royal Red
+                            sand: '#fff9f0', // Creamy White
+                            gold: '#d4af37', // Royal Gold
+                            goldLight: '#f3e5ab',
+                            blue: '#1a2a3a', // Royal Navy
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['"Poppins"', 'sans-serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                        luxury: ['"Cinzel"', 'serif'],
+                        hand: ['"Kalam"', 'cursive'], // New readable handwriting font
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'spin-slow': 'spin 10s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Royal Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff9f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #d66d75, #d4af37);
+            border-radius: 10px;
+        }
+        .pattern-jaali {
+            background-color: #fff9f0;
+            background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px), radial-gradient(#d4af37 0.5px, #fff9f0 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+        .glass-royal {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(214, 109, 117, 0.1);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 20px -5px rgba(0,0,0,0.1);
+        }
+        .btn-royal {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn-royal::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .btn-royal:hover::after {
+            left: 100%;
+        }
+        .btn-royal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px rgba(214, 109, 117, 0.5);
+        }
+        .corner-border {
+            position: relative;
+        }
+        .corner-border::before, .corner-border::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: #d4af37;
+            border-style: solid;
+            transition: all 0.3s ease;
+        }
+        .corner-border::before { top: 0; left: 0; border-width: 2px 0 0 2px; }
+        .corner-border::after { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+        .corner-border:hover::before, .corner-border:hover::after {
+            width: 100%;
+            height: 100%;
+            border-color: #d66d75;
+        }
+        ::selection {
+            background: #d66d75;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="font-body bg-jaipur-sand text-gray-800 antialiased overflow-x-hidden selection:bg-jaipur-pink selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 md:h-24 gap-2 md:gap-4 lg:gap-12">
+                
+                <!-- Logo & Branding Section -->
+                <div class="flex-shrink-0 flex items-center gap-1 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <div class="relative flex items-center justify-center mt-2">
+                        <i class="fa-solid fa-rocket text-[#b3404a] text-3xl md:text-4xl -rotate-45 transition-transform duration-300 group-hover:-translate-y-1"></i>
+                    </div>
+                    <div class="flex flex-col items-start justify-center">
+                        <h1 class="font-heading font-bold text-xl md:text-3xl text-gray-900 tracking-wide leading-none group-hover:text-jaipur-deep transition-colors">
+                            Startup<span class="text-[#b3404a]">Jaipur</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 justify-end flex-1">
+                    <a href="#about" class="text-sm uppercase tracking-widest font-semibold text-gray-600 hover:text-jaipur-pink transition duration-300 relative group whitespace-nowrap">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-jaipur-pink transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#sectors" class="text-sm uppercase tracking-widest font-semibold text-gray-600 hover:text-jaipur-pink transition duration-300 relative group whitespace-nowrap">
+                        Sectors
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-jaipur-pink transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#services" class="text-sm uppercase tracking-widest font-semibold text-gray-600 hover:text-jaipur-pink transition duration-300 relative group whitespace-nowrap">
+                        Services
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-jaipur-pink transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    
+                    <!-- WhatsApp Button -->
+                    <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-7 py-2 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-[2px] border-l-[2px] border-[#d4af37] rounded-tl-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-[2px] border-r-[2px] border-[#d4af37] rounded-br-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
+                        <div class="absolute top-0 right-0 w-1 h-1 bg-jaipur-pink rounded-full group-hover:opacity-0 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 w-1 h-1 bg-jaipur-pink rounded-full group-hover:opacity-0 transition-opacity duration-300"></div>
+                        <div class="relative z-10 flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-lg text-[#25D366] drop-shadow-sm group-hover:scale-110 group-hover:rotate-[360deg] transition-all duration-700"></i>
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d4af37] font-luxury whitespace-nowrap group-hover:text-jaipur-deep transition-colors duration-300">
+                                Join WhatsApp Group
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Join Now Button -->
+                    <a href="#contact" class="px-5 py-2 bg-transparent border border-jaipur-deep text-jaipur-deep rounded-full font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-jaipur-deep hover:text-white transition-all duration-300 hover:shadow-lg active:scale-95 whitespace-nowrap">
+                        Join Now
+                    </a>
+                </div>
+
+                <!-- Mobile Elements Container -->
+                <div class="md:hidden flex items-center gap-2 z-50">
+                    <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-3 py-1.5 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95 origin-right">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-[2px] border-l-[2px] border-[#d4af37] rounded-tl-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-[2px] border-r-[2px] border-[#d4af37] rounded-br-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
+                        <div class="relative z-10 flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg text-[#25D366]"></i>
+                            <span class="text-[9px] font-bold uppercase text-[#d4af37]">Join</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Fixed Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="relative group w-10 h-10 flex justify-center items-center rounded-full bg-white shadow-md border border-gray-200 z-[60]">
+                        <div class="relative z-10 flex flex-col items-center justify-center gap-[4px] w-5">
+                            <span id="line1" class="w-full h-[2px] bg-jaipur-deep rounded-full transition-all duration-300 origin-center"></span>
+                            <span id="line2" class="w-full h-[2px] bg-jaipur-gold rounded-full transition-all duration-300"></span>
+                            <span id="line3" class="w-full h-[2px] bg-jaipur-deep rounded-full transition-all duration-300 origin-center"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-jaipur-gold/20 absolute w-full shadow-2xl transition-all duration-300 top-20 left-0 z-40">
+            <a href="#about" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">About Us</a>
+            <a href="#sectors" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Sectors</a>
+            <a href="#services" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Services</a>
+            <a href="#events" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Events</a>
+            <button onclick="toggleLoginModal()" class="block w-full text-left px-6 py-4 text-jaipur-gold font-bold hover:bg-jaipur-sand border-b border-gray-100">
+                <i class="fa-solid fa-lock mr-2"></i> Login
+            </button>
+            <div class="p-4">
+                <a href="#contact" class="block w-full text-center py-3 bg-jaipur-pink text-white rounded-lg font-bold shadow-md">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Optimized for Mobile) -->
+    <section class="relative min-h-[600px] md:min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-jaipur-deep via-jaipur-pink to-[#e67e22] z-0"></div>
+        <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-64 h-64 bg-jaipur-gold/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-0 left-0 right-0 z-10">
+            <svg viewBox="0 0 1440 100" fill="none" class="w-full h-auto text-jaipur-sand fill-current">
+                <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
+            </svg>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-jaipur-gold/50 rounded-full bg-white shadow-xl mb-6 animate-fade-up">
+                <span class="text-jaipur-deep font-bold tracking-widest text-[10px] md:text-xs uppercase">The Pink City Startup Hub</span>
+            </div>
+            <h1 class="font-heading text-3xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 leading-tight text-white drop-shadow-lg animate-fade-up" style="animation-delay: 0.2s;">
+                Build Your Dream <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold to-white">in Jaipur</span>
+            </h1>
+            <p class="text-sm md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light animate-fade-up" style="animation-delay: 0.4s;">
+                Connect with investors, find co-founders, and grow your business in the heart of the Pink City.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay: 0.6s;">
+                <a href="#contact" class="px-8 py-3 bg-jaipur-gold text-jaipur-blue rounded-full font-bold text-base hover:bg-white hover:scale-105 transition-all shadow-xl shadow-jaipur-gold/30 btn-royal flex items-center justify-center gap-3">
+                    Start Journey <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+                <a href="#sectors" class="px-8 py-3 border border-white/40 text-white rounded-full font-bold text-base hover:bg-white hover:text-jaipur-pink hover:border-white transition-all backdrop-blur-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass"></i> Explore Sectors
+                </a>
+            </div>
+            <div class="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto animate-fade-up" style="animation-delay: 0.8s;">
+                <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-1">500+</div>
+                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80">Startups</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-1">₹10Cr+</div>
+                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80">Funding</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-1">50+</div>
+                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80">Mentors</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-1">24/7</div>
+                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80">Support</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optimized Login Button for Mobile -->
+        <div class="absolute top-20 right-2 md:top-28 md:right-8 z-40 animate-fade-up scale-75 origin-top-right md:scale-100" style="animation-delay: 1s;">
+            <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(214,109,117,0.5)] hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.6)]">
+                <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-jaipur-pink to-jaipur-blue rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
+                <div class="relative px-3 py-1.5 md:px-6 md:py-2 bg-white rounded-full flex items-center gap-2 md:gap-3 z-10 transition-colors duration-300 group-hover:bg-jaipur-sand">
+                    <i class="fa-solid fa-key text-jaipur-gold text-xs group-hover:rotate-45 transition-transform duration-300"></i>
+                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink group-hover:from-jaipur-gold group-hover:to-jaipur-blue transition-all duration-300">Login</span>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Us (Moved UP - Now Below Hero) -->
+    <section id="about-us" class="pt-24 pb-0 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative group">
+                    <div class="absolute inset-0 border-[3px] border-jaipur-gold rounded-t-[10rem] rounded-b-3xl transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                    <div class="relative rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop" alt="Jaipur Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jaipur-deep/60 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-8 left-0 right-0 text-center">
+                            <div class="inline-block bg-white/90 backdrop-blur-md px-8 py-2 rounded-full shadow-lg border border-jaipur-gold/40">
+                                <span class="font-heading text-jaipur-deep font-bold text-xl">Since 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-6 -right-6 w-16 h-16 bg-jaipur-sand rounded-full flex items-center justify-center text-3xl text-jaipur-gold shadow-lg animate-spin-slow border border-jaipur-gold/20">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 text-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-[2px] w-12 bg-jaipur-gold"></div>
+                        <span class="font-script text-3xl text-jaipur-pink">Who We Are</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Bridging <span class="text-jaipur-gold">Heritage</span> with <br>
+                        <span class="text-jaipur-deep">Innovation</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed font-light">
+                        <strong class="text-gray-900 font-medium">Startup Jaipur</strong> is not just an incubator; it is a movement. Located in the heart of India's Pink City, we are dedicated to transforming traditional businesses with modern technology while nurturing the next generation of tech unicorns.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed font-light">
+                        We provide a platform where artisans meet app developers, and students meet investors. Our mission is to put Jaipur on the global startup map.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-10">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-jaipur-sand border border-jaipur-gold/20 hover:border-jaipur-gold/50 transition">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-jaipur-deep shrink-0 shadow-sm">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 font-heading">Community</h4>
+                                <p class="text-xs text-gray-500 mt-1">Strong network of 500+ founders.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-jaipur-sand border border-jaipur-gold/20 hover:border-jaipur-gold/50 transition">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-jaipur-gold shrink-0 shadow-sm">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 font-heading">Mentorship</h4>
+                                <p class="text-xs text-gray-500 mt-1">Guidance from industry experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="group inline-flex items-center gap-2 text-jaipur-deep font-bold uppercase tracking-widest text-sm hover:text-jaipur-pink transition-colors">
+                        Read Our Story 
+                        <i class="fa-solid fa-arrow-right-long transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vision (Royal & Beautiful Design) -->
+    <section class="pt-0 pb-24 relative overflow-hidden bg-white">
+        <!-- Background Texture -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 300px;"></div>
+        
+        <!-- Animated Blobs -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-jaipur-gold/10 rounded-full blur-3xl animate-float opacity-60"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-jaipur-pink/10 rounded-full blur-3xl animate-float opacity-60" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- The Royal Card (Clean Single Frame) -->
+            <div class="relative group">
+                <!-- Removed the 3D Glow/Double Background div from here -->
+                
+                <div class="relative bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100">
+                    <!-- Top Gold Bar -->
+                    <div class="h-2 w-full bg-gradient-to-r from-jaipur-deep via-jaipur-pink to-jaipur-gold"></div>
+
+                    <div class="grid md:grid-cols-2">
+                        <!-- Image Side (UPDATED IMAGE) -->
+                        <div class="relative h-64 md:h-auto overflow-hidden">
+                            <!-- New Image: Business Expo / Startup Event / Modern Campus Vibe -->
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Startup Expo & Vision">
+                            <div class="absolute inset-0 bg-jaipur-deep/20 mix-blend-overlay"></div>
+                            <!-- Overlay Text on Image -->
+                            <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
+                                <span class="font-script text-3xl text-jaipur-gold">Future Roadmap</span>
+                                <h3 class="text-xl font-light mt-1">Connecting Jaipur to the World</h3>
+                            </div>
+                        </div>
+
+                        <!-- Content Side -->
+                        <div class="p-8 md:p-12 flex flex-col justify-center relative">
+                            <!-- Decorative Corner (Kept inside, subtle) -->
+                            <div class="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-jaipur-gold/30 rounded-tr-3xl"></div>
+                            <div class="absolute bottom-6 left-6 w-16 h-16 border-b-2 border-l-2 border-jaipur-gold/30 rounded-bl-3xl"></div>
+
+                            <div class="mb-6">
+                                <h2 class="font-heading text-4xl font-bold text-gray-900">Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-pink to-jaipur-deep">Vision</span></h2>
+                                <div class="w-20 h-1 bg-jaipur-gold mt-2 rounded-full"></div>
+                            </div>
+
+                            <h3 class="font-heading text-xl font-semibold text-gray-700 mb-6 italic leading-relaxed">
+                                "Empowering Dreams, Building the Future."
+                            </h3>
+
+                            <p class="text-gray-600 leading-relaxed mb-6 font-light">
+                                <strong class="text-gray-900">Startup Jaipur</strong> aims to empower students, college girls and boys, job seekers, and young entrepreneurs to start and grow modern, technology-driven startups.
+                            </p>
+                            
+                            <p class="text-gray-600 leading-relaxed mb-8 font-light">
+                                Our vision is to make <span class="text-jaipur-deep font-medium border-b border-jaipur-pink/30">Jaipur and Rajasthan</span> a strong startup ecosystem by providing the right ideas, guidance, and execution support.
+                            </p>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-jaipur-sand flex items-center justify-center text-jaipur-deep text-xl shadow-inner">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <p class="text-sm text-gray-500 font-medium italic border-l-2 border-jaipur-gold pl-4">
+                                    With the right mentorship, every young person can become a successful entrepreneur.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Who Can Join? -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-jaipur-gold font-bold uppercase tracking-widest text-sm">Target Audience</span>
+                <h2 class="font-heading text-4xl font-bold text-gray-900 mt-2">Who Can <span class="text-jaipur-pink">Join?</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Personas -->
+                <div class="group text-center">
+                    <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-jaipur-pink group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-graduation-cap text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">Students</h4>
+                    <p class="text-xs text-gray-500 mt-1">Girls & Boys</p>
+                </div>
+                <div class="group text-center">
+                    <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-jaipur-gold group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-rocket text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">Founders</h4>
+                    <p class="text-xs text-gray-500 mt-1">First-Time</p>
+                </div>
+                <div class="group text-center">
+                    <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-jaipur-blue group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-briefcase text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">Job Seekers</h4>
+                    <p class="text-xs text-gray-500 mt-1">Aspirants</p>
+                </div>
+                <div class="group text-center">
+                    <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-person-dress text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">Women</h4>
+                    <p class="text-xs text-gray-500 mt-1">Entrepreneurs</p>
+                </div>
+                <div class="group text-center">
+                    <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-microchip text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">Techies</h4>
+                    <p class="text-xs text-gray-500 mt-1">Enthusiasts</p>
+                </div>
+                <div class="group text-center">
+                    <div class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-bolt text-3xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">Youth</h4>
+                    <p class="text-xs text-gray-500 mt-1">Youngsters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: 8 Core Services (A-Z) -->
+    <section class="py-24 bg-jaipur-blue text-white relative">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <i class="fa-solid fa-list-check text-jaipur-gold text-4xl mb-4"></i>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold">Complete A-Z <span class="text-jaipur-gold">Services</span></h2>
+                <p class="mt-4 text-gray-300">From concept to company, we handle everything.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">01</div>
+                    <h4 class="font-bold text-lg mb-2">Idea & Innovation</h4>
+                    <p class="text-sm text-gray-400">New startup idea generation & client idea refinement.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">02</div>
+                    <h4 class="font-bold text-lg mb-2">Business Research</h4>
+                    <p class="text-sm text-gray-400">Market research, feasibility study & competitor analysis.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">03</div>
+                    <h4 class="font-bold text-lg mb-2">Naming & Branding</h4>
+                    <p class="text-sm text-gray-400">Unique startup names & brand identity creation.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">04</div>
+                    <h4 class="font-bold text-lg mb-2">Registration</h4>
+                    <p class="text-sm text-gray-400">Company registration & legal paperwork support.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">05</div>
+                    <h4 class="font-bold text-lg mb-2">Logo & Identity</h4>
+                    <p class="text-sm text-gray-400">Professional logo design & visual guidelines.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">06</div>
+                    <h4 class="font-bold text-lg mb-2">Trademark</h4>
+                    <p class="text-sm text-gray-400">Trademark filing, consultation & registration.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">07</div>
+                    <h4 class="font-bold text-lg mb-2">Digital Setup</h4>
+                    <p class="text-sm text-gray-400">Domain purchase, email setup & social creation.</p>
+                </div>
+                <!-- Service 8 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-jaipur-gold/50 transition hover:-translate-y-1">
+                    <div class="text-jaipur-gold text-xl font-bold mb-2">08</div>
+                    <h4 class="font-bold text-lg mb-2">Digital Marketing</h4>
+                    <p class="text-sm text-gray-400">Social media optimization & growth strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Working Process -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-bold text-gray-900">Our Working <span class="text-jaipur-deep">Process</span></h2>
+                <p class="mt-4 text-gray-600">A structured path to success.</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-8 relative z-10">
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm">
+                        <div class="w-10 h-10 bg-jaipur-pink text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">1</div>
+                        <h4 class="font-bold text-sm">Consultation</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm">
+                        <div class="w-10 h-10 bg-jaipur-pink text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">2</div>
+                        <h4 class="font-bold text-sm">Research</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm">
+                        <div class="w-10 h-10 bg-jaipur-pink text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">3</div>
+                        <h4 class="font-bold text-sm">Branding</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm">
+                        <div class="w-10 h-10 bg-jaipur-pink text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">4</div>
+                        <h4 class="font-bold text-sm">Legal</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm">
+                        <div class="w-10 h-10 bg-jaipur-pink text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">5</div>
+                        <h4 class="font-bold text-sm">Digital</h4>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm">
+                        <div class="w-10 h-10 bg-jaipur-pink text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">6</div>
+                        <h4 class="font-bold text-sm">Growth</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Why Choose & Mission -->
+    <section class="py-24 bg-jaipur-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Why Choose -->
+                <div>
+                    <h2 class="font-heading text-3xl font-bold text-gray-900 mb-6">Why Choose <span class="text-jaipur-gold">Startup Jaipur?</span></h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check-circle text-green-500"></i> One-Stop A–Z Startup Solution</li>
+                        <li class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check-circle text-green-500"></i> Youth & Student-Friendly</li>
+                        <li class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check-circle text-green-500"></i> Affordable & Practical</li>
+                        <li class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check-circle text-green-500"></i> Modern Tech-Based Models</li>
+                        <li class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm"><i class="fa-solid fa-check-circle text-green-500"></i> Local Jaipur Support Team</li>
+                    </ul>
+                </div>
+                <!-- Mission -->
+                <div class="bg-jaipur-deep text-white p-10 rounded-[2rem] relative overflow-hidden">
+                    <div class="absolute inset-0 pattern-jaali opacity-10"></div>
+                    <h2 class="font-heading text-3xl font-bold mb-4 relative z-10">Our Mission</h2>
+                    <p class="text-lg relative z-10 leading-relaxed font-light">
+                        Our mission is to transform youth from <span class="font-bold text-jaipur-gold">Job Seekers</span> into <span class="font-bold text-jaipur-gold">Job Creators</span> and establish Jaipur as a leading Startup Hub in India.
+                    </p>
+                    <div class="mt-8 relative z-10">
+                        <a href="#contact" class="px-6 py-2 bg-white text-jaipur-deep font-bold rounded-full text-sm hover:bg-jaipur-gold transition">Join The Mission</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Business Ideas -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-6">Business Ideas & Opportunities</h2>
+            <p class="text-gray-600 mb-8">We regularly share new and innovative business ideas including:</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-bold text-gray-700">Tech Startups</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-bold text-gray-700">Digital Services</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-bold text-gray-700">Online Platforms</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-bold text-gray-700">Local Tech Biz</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Jaipur Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Startup <span class="text-jaipur-pink">Jaipur?</span></h2>
+                <div class="h-1 w-24 bg-jaipur-gold mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Jaipur is not just about forts and palaces anymore. It is rapidly becoming the Tier-2 startup capital of India. Low cost, high talent.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-jaipur-pink text-center group hover:shadow-2xl transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-jaipur-pink transition">
+                        <i class="fa-solid fa-indian-rupee-sign text-2xl text-jaipur-deep group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Cost Effective</h3>
+                    <p class="text-gray-600 text-sm">Run your office at 1/3rd the cost of Bangalore or Gurgaon. More runway for your startup.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-jaipur-gold text-center group hover:shadow-2xl transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-jaipur-gold transition">
+                        <i class="fa-solid fa-palette text-2xl text-yellow-700 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Global Heritage</h3>
+                    <p class="text-gray-600 text-sm">Direct access to international markets through Jaipur's established tourism and handicraft export network.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-jaipur-blue text-center group hover:shadow-2xl transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-jaipur-blue transition">
+                        <i class="fa-solid fa-users text-2xl text-jaipur-blue group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Strong Community</h3>
+                    <p class="text-gray-600 text-sm">Join thousands of entrepreneurs at iStart Nest and other incubators supported by the Govt of Rajasthan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section id="sectors" class="py-20 bg-orange-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-xl">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900">Sabhi Tarah Ke <span class="text-jaipur-pink">Startups</span></h2>
+                    <p class="mt-2 text-gray-600">From Polo Ground to Blue Pottery, we support every dream.</p>
+                </div>
+                <button class="hidden md:block text-jaipur-pink font-semibold hover:text-jaipur-deep">View All Categories &rarr;</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <!-- CHANGED IMAGE: Art & Craft (Pottery/Artisan) -->
+                    <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Handicrafts">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="h-1 w-12 bg-jaipur-gold mb-4 rounded-full"></div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Art & Craft</h3>
+                        <p class="text-gray-300 text-sm line-clamp-2 mb-4 group-hover:text-white transition">Blue pottery, textiles, and jewelry going digital.</p>
+                        <span class="text-jaipur-gold text-sm font-bold uppercase tracking-wider group-hover:underline">Explore &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Tech">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="h-1 w-12 bg-jaipur-gold mb-4 rounded-full"></div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">IT & SaaS</h3>
+                        <p class="text-gray-300 text-sm line-clamp-2 mb-4 group-hover:text-white transition">Software development and digital marketing hubs.</p>
+                        <span class="text-jaipur-gold text-sm font-bold uppercase tracking-wider group-hover:underline">Explore &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Tourism">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="h-1 w-12 bg-jaipur-gold mb-4 rounded-full"></div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Tourism</h3>
+                        <p class="text-gray-300 text-sm line-clamp-2 mb-4 group-hover:text-white transition">Experience guides and boutique hotels.</p>
+                        <span class="text-jaipur-gold text-sm font-bold uppercase tracking-wider group-hover:underline">Explore &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <!-- CHANGED IMAGE: Small Business (Cafe/Bakery) -->
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Small Biz">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <div class="h-1 w-12 bg-jaipur-gold mb-4 rounded-full"></div>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Local Biz</h3>
+                        <p class="text-gray-300 text-sm line-clamp-2 mb-4 group-hover:text-white transition">Cafes, Boutiques, and Home bakers.</p>
+                        <span class="text-jaipur-gold text-sm font-bold uppercase tracking-wider group-hover:underline">Explore &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Services Section (Updated Background Design) -->
+    <section id="services" class="py-20 relative bg-white overflow-hidden">
+        <!-- Decorative Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+        
+        <!-- Decorative Color Glows (Design Elements) -->
+        <div class="absolute -top-20 -left-20 w-72 h-72 bg-jaipur-pink/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-jaipur-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-jaipur-blue/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900">Our <span class="text-jaipur-gold">Services</span></h2>
+                <p class="mt-4 text-gray-600">Entrepreneurship banane ka safar aasan karein.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-white border border-gray-200 p-6 rounded-lg w-full md:w-80 hover:border-jaipur-pink transition relative overflow-hidden group shadow-sm hover:shadow-xl">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-jaipur-pink/10 rounded-bl-full group-hover:bg-jaipur-pink/20 transition"></div>
+                    <i class="fa-solid fa-file-contract text-3xl text-jaipur-pink mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Company Registration</h3>
+                    <p class="text-gray-500 text-sm">PVT LTD, LLP, or One Person Company. We handle all paperwork.</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-6 rounded-lg w-full md:w-80 hover:border-jaipur-pink transition relative overflow-hidden group shadow-sm hover:shadow-xl">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-jaipur-gold/10 rounded-bl-full group-hover:bg-jaipur-gold/20 transition"></div>
+                    <i class="fa-solid fa-hand-holding-dollar text-3xl text-jaipur-gold mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Funding & Loans</h3>
+                    <p class="text-gray-500 text-sm">Access to Angel Investors in Jaipur and Govt Schemes (Mudra, Startup India).</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-6 rounded-lg w-full md:w-80 hover:border-jaipur-pink transition relative overflow-hidden group shadow-sm hover:shadow-xl">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-jaipur-blue/10 rounded-bl-full group-hover:bg-jaipur-blue/20 transition"></div>
+                    <i class="fa-solid fa-laptop-code text-3xl text-jaipur-blue mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Digital Presence</h3>
+                    <p class="text-gray-500 text-sm">Website design, Social Media Marketing, and Branding for Jaipur businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A to Z Services Section (Extended + Royal Design) -->
+    <section id="all-services" class="py-24 bg-jaipur-sand relative">
+        <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <i class="fa-solid fa-crown text-jaipur-gold text-2xl mb-4 animate-bounce"></i>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold text-gray-900">A to Z <span class="text-jaipur-pink">Services</span></h2>
+                <div class="flex justify-center items-center gap-2 mt-4">
+                    <div class="h-[1px] w-12 bg-jaipur-gold"></div>
+                    <i class="fa-solid fa-diamond text-[10px] text-jaipur-pink"></i>
+                    <div class="h-[1px] w-12 bg-jaipur-gold"></div>
+                </div>
+                <p class="mt-4 text-gray-600">Idea se IPO tak, hum har kadam par aapke saath hain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                
+                <!-- 1. Idea Validation -->
+                <div class="relative group h-full">
+                    <!-- Card Background & Shadow -->
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-jaipur-gold/20 group-hover:-translate-y-1"></div>
+                    
+                    <!-- THE ROYAL FRAME (Al-Ajeeb Animation) -->
+                    <!-- Top Left Corner -->
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-jaipur-gold rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <!-- Bottom Right Corner -->
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-jaipur-gold rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    
+                    <!-- Inner Decorative Lines (Static) -->
+                    <div class="absolute top-4 right-4 w-2 h-2 bg-jaipur-pink/20 rounded-full group-hover:bg-jaipur-pink transition-colors"></div>
+                    <div class="absolute bottom-4 left-4 w-2 h-2 bg-jaipur-pink/20 rounded-full group-hover:bg-jaipur-pink transition-colors"></div>
+
+                    <!-- Content -->
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-red-50 to-white rounded-full border border-red-100 flex items-center justify-center text-2xl text-jaipur-pink shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-jaipur-deep transition-colors">Idea Validation</h3>
+                                <p class="text-[10px] text-jaipur-gold font-bold tracking-widest uppercase mt-1">STEP 01</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-jaipur-gold/50 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Start karne se pehle market research aur business plan banayein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-gold mr-2"></i>Market Research</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-gold mr-2"></i>Business Model</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Branding & Design -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-pink-200 group-hover:-translate-y-1"></div>
+                    
+                    <!-- Frame -->
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-pink-400 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-pink-400 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-pink-50 to-white rounded-full border border-pink-100 flex items-center justify-center text-2xl text-pink-500 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-pen-nib"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors">Branding</h3>
+                                <p class="text-[10px] text-pink-400 font-bold tracking-widest uppercase mt-1">IDENTITY</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-pink-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">First impression matter karta hai. Apni pehchan banayein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-pink-400 mr-2"></i>Logo & Identity</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-pink-400 mr-2"></i>Brochure Design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Digital Marketing -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-orange-200 group-hover:-translate-y-1"></div>
+                    
+                    <!-- Frame -->
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-orange-400 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-orange-400 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-orange-50 to-white rounded-full border border-orange-100 flex items-center justify-center text-2xl text-orange-500 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-orange-600 transition-colors">Digital Marketing</h3>
+                                <p class="text-[10px] text-orange-400 font-bold tracking-widest uppercase mt-1">GROWTH</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-orange-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Online customers tak pahunchne ka sabse asardaar tareeka.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-orange-400 mr-2"></i>Ads & PPC</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-orange-400 mr-2"></i>SEO & Ranking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Registration & Compliance -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-yellow-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-yellow-500 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-yellow-500 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-yellow-50 to-white rounded-full border border-yellow-100 flex items-center justify-center text-2xl text-yellow-600 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-yellow-600 transition-colors">Registration</h3>
+                                <p class="text-[10px] text-yellow-500 font-bold tracking-widest uppercase mt-1">LEGAL</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-yellow-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Hassle-free legal work so you can focus on business.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-yellow-500 mr-2"></i>Pvt Ltd / LLP</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-yellow-500 mr-2"></i>GST & Trademark</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Mentorship & Consultancy -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-red-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-jaipur-deep rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-jaipur-deep rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-red-50 to-white rounded-full border border-red-100 flex items-center justify-center text-2xl text-jaipur-deep shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-jaipur-deep transition-colors">Mentorship</h3>
+                                <p class="text-[10px] text-jaipur-deep font-bold tracking-widest uppercase mt-1">GUIDANCE</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-red-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Industry veterans se guidance lein aur business badhayein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-deep mr-2"></i>1-on-1 Mentoring</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-deep mr-2"></i>Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. Web Development -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-jaipur-blue rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-jaipur-blue rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-blue-50 to-white rounded-full border border-blue-100 flex items-center justify-center text-2xl text-jaipur-blue shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-jaipur-blue transition-colors">Web Dev</h3>
+                                <p class="text-[10px] text-jaipur-blue font-bold tracking-widest uppercase mt-1">TECH</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-blue-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Professional website banayein jo business badhaye.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-blue mr-2"></i>E-commerce</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-blue mr-2"></i>Landing Pages</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. App Development -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-indigo-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-indigo-600 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-indigo-600 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-indigo-50 to-white rounded-full border border-indigo-100 flex items-center justify-center text-2xl text-indigo-600 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-indigo-700 transition-colors">App Dev</h3>
+                                <p class="text-[10px] text-indigo-600 font-bold tracking-widest uppercase mt-1">MOBILE</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-indigo-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Apne customers ke haath mein apna business pahunchayein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-indigo-600 mr-2"></i>Android/iOS</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-indigo-600 mr-2"></i>Flutter Apps</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 8. CA & Financial Services -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-green-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-green-600 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-green-600 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-green-50 to-white rounded-full border border-green-100 flex items-center justify-center text-2xl text-green-600 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-green-700 transition-colors">CA & Finance</h3>
+                                <p class="text-[10px] text-green-600 font-bold tracking-widest uppercase mt-1">ACCOUNTS</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-green-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Accounts aur Tax ki chinta hum par chhod dein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-green-600 mr-2"></i>GST Filing</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-green-600 mr-2"></i>IT Returns</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 9. Legal & IPR -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-red-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-red-500 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-red-500 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-red-50 to-white rounded-full border border-red-100 flex items-center justify-center text-2xl text-red-500 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-gavel"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors">Legal & IPR</h3>
+                                <p class="text-[10px] text-red-500 font-bold tracking-widest uppercase mt-1">PROTECTION</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-red-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Apne brand aur idea ko protect karein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-red-500 mr-2"></i>Trademark</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-red-500 mr-2"></i>Copyright</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 10. Funding Support -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-purple-600 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-purple-600 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-50 to-white rounded-full border border-purple-100 flex items-center justify-center text-2xl text-purple-600 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-purple-700 transition-colors">Funding</h3>
+                                <p class="text-[10px] text-purple-600 font-bold tracking-widest uppercase mt-1">INVESTMENT</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-purple-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Investors ke saamne present karne ki tayari.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-purple-600 mr-2"></i>Pitch Deck</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-purple-600 mr-2"></i>Valuation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 11. HR & Recruitment -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-teal-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-teal-500 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-teal-500 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-teal-50 to-white rounded-full border border-teal-100 flex items-center justify-center text-2xl text-teal-500 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">Recruitment</h3>
+                                <p class="text-[10px] text-teal-500 font-bold tracking-widest uppercase mt-1">TEAM</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-teal-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Sahi team hi startup ko safal banati hai.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-teal-500 mr-2"></i>Hiring</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-teal-500 mr-2"></i>Payroll</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 12. Office Solutions -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-gray-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-gray-600 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-gray-600 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-gray-50 to-white rounded-full border border-gray-200 flex items-center justify-center text-2xl text-gray-600 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-gray-700 transition-colors">Office Space</h3>
+                                <p class="text-[10px] text-gray-600 font-bold tracking-widest uppercase mt-1">INFRA</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-gray-400 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Bina bhaari kharche ke apna office shuru karein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-gray-600 mr-2"></i>Co-working</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-gray-600 mr-2"></i>Virtual Office</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- 13. Content & PR -->
+                 <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-blue-500 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-blue-500 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-blue-50 to-white rounded-full border border-blue-100 flex items-center justify-center text-2xl text-blue-500 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-newspaper"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">Content & PR</h3>
+                                <p class="text-[10px] text-blue-500 font-bold tracking-widest uppercase mt-1">MEDIA</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-blue-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Apni kahani duniya ko sunayein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-blue-500 mr-2"></i>Press Release</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-blue-500 mr-2"></i>Content Writing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 14. Export & IEC -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-yellow-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-yellow-600 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-yellow-600 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-yellow-50 to-white rounded-full border border-yellow-100 flex items-center justify-center text-2xl text-yellow-600 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-ship"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-yellow-700 transition-colors">Export</h3>
+                                <p class="text-[10px] text-yellow-600 font-bold tracking-widest uppercase mt-1">GLOBAL</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-yellow-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Jaipur ke handicrafts ko global market mein bechein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-yellow-600 mr-2"></i>IEC Code</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-yellow-600 mr-2"></i>Shipping</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 15. Cloud & IT -->
+                <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-cyan-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-cyan-500 rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-cyan-500 rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-cyan-50 to-white rounded-full border border-cyan-100 flex items-center justify-center text-2xl text-cyan-500 shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-cyan-600 transition-colors">Cloud & IT</h3>
+                                <p class="text-[10px] text-cyan-500 font-bold tracking-widest uppercase mt-1">SERVER</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-cyan-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Technical infrastructure set karein.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-cyan-500 mr-2"></i>AWS Credits</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-cyan-500 mr-2"></i>Cyber Security</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- 16. Event & Networking -->
+                 <div class="relative group h-full">
+                    <div class="absolute inset-0 bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-rose-200 group-hover:-translate-y-1"></div>
+                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-jaipur-deep rounded-tl-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-jaipur-deep rounded-br-xl transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-2xl z-10"></div>
+
+                    <div class="relative p-8 z-20 flex flex-col h-full">
+                        <div class="flex items-center gap-5 mb-5">
+                            <div class="w-14 h-14 bg-gradient-to-br from-rose-50 to-white rounded-full border border-rose-100 flex items-center justify-center text-2xl text-jaipur-deep shadow-inner group-hover:rotate-12 transition-transform duration-500">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                             <div>
+                                <h3 class="font-heading text-xl font-bold text-gray-800 group-hover:text-jaipur-deep transition-colors">Networking</h3>
+                                <p class="text-[10px] text-jaipur-deep font-bold tracking-widest uppercase mt-1">COMMUNITY</p>
+                            </div>
+                        </div>
+                        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5 group-hover:via-rose-300 transition-all"></div>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Jaipur ke sabse bade startup community events.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 font-medium mt-auto">
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-deep mr-2"></i>Meetups</li>
+                            <li class="flex items-center"><i class="fa-solid fa-caret-right text-jaipur-deep mr-2"></i>Launch Events</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Services -->
+    <section id="social-media-services" class="py-20 bg-jaipur-sand relative overflow-hidden">
+         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-jaipur-pink font-bold tracking-wider text-sm uppercase">Digital Growth</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-2">Social Media <span class="text-jaipur-gold">Powerhouse</span></h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Aaj ke digital daur mein jo dikhta hai, wahi bikta hai. Hum aapke brand ko viral banayenge.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-jaipur-pink">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-user-gear text-2xl text-jaipur-pink"></i>
+                        <h3 class="font-bold text-lg">Account Setup</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Professional profile setup on Instagram, FB, LinkedIn & Twitter.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Bio Optimization</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Highlight Covers</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Link in Bio Page</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-jaipur-gold">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-list-check text-2xl text-jaipur-gold"></i>
+                        <h3 class="font-bold text-lg">Full Management</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Daily handling of your social media accounts so you can focus on business.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Daily Posting</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Comment Reply</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Story Engagement</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-jaipur-blue">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-lightbulb text-2xl text-jaipur-blue"></i>
+                        <h3 class="font-bold text-lg">Content Ideas</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Viral content ideas aur trending topics par research.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Monthly Calendar</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Trend Analysis</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Competitor Research</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-orange-500">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-pen-fancy text-2xl text-orange-500"></i>
+                        <h3 class="font-bold text-lg">Content Writing</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Engaging captions jo audience ko rok kar rakhe.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Creative Captions</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Hashtag Strategy</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Ad Copywriting</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-purple-600">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-image text-2xl text-purple-600"></i>
+                        <h3 class="font-bold text-lg">Regular Posts</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">High-quality graphic design for daily updates.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Festival Posts</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Product Showcase</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Educational Carousels</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-red-500">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-brands fa-instagram text-2xl text-red-500"></i>
+                        <h3 class="font-bold text-lg">Regular Reels</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Reach badhane ke liye trending audio wale Reels.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Reel Scripting</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Shooting Guidance</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Cover Design</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-teal-500">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-film text-2xl text-teal-500"></i>
+                        <h3 class="font-bold text-lg">Editing Services</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Raw footage ko professional video mein badlein.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Reel Editing</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Transition Effects</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Color Grading</li>
+                    </ul>
+                </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition transform hover:-translate-y-1 border-t-4 border-blue-600">
+                      <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-chart-line text-2xl text-blue-600"></i>
+                        <h3 class="font-bold text-lg">Paid Ads</h3>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-3">Instagram aur Facebook ads chala kar sales badhayein.</p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Ad Campaign Setup</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>Audience Targeting</li>
+                        <li><i class="fa-solid fa-check text-jaipur-gold mr-2"></i>ROI Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Student Corner (Added) -->
+    <section id="students" class="py-20 bg-white relative">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-jaipur-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-jaipur-pink/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block p-3 rounded-full bg-jaipur-sand mb-4 shadow-sm border border-jaipur-gold/30">
+                    <i class="fa-solid fa-graduation-cap text-3xl text-jaipur-deep"></i>
+                </div>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900">Student <span class="text-jaipur-gold">Corner</span></h2>
+                <h3 class="text-lg font-heading text-jaipur-pink font-bold mt-2 italic">"College se Company Tak"</h3>
+                <p class="mt-4 text-gray-600">MNIT, RU, JECRC aur Jaipur ke sabhi students ke liye khaas मौके.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1: Internship -->
+                <div class="flex flex-col md:flex-row bg-jaipur-sand rounded-2xl overflow-hidden shadow-lg border border-jaipur-gold/20 group hover:shadow-2xl transition duration-300">
+                    <div class="md:w-2/5 bg-jaipur-deep relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+                        <i class="fa-solid fa-laptop-file text-6xl text-white group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h3 class="font-heading text-2xl font-bold text-gray-800 mb-2">Startup Internships</h3>
+                        <p class="text-gray-600 text-sm mb-4">Jaipur ke top startups mein kaam seekhein. Certificate aur stipend dono milega.</p>
+                        <a href="#contact" class="text-jaipur-pink font-bold text-sm uppercase tracking-wider hover:underline">Apply Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Campus Ambassador -->
+                <div class="flex flex-col md:flex-row bg-jaipur-sand rounded-2xl overflow-hidden shadow-lg border border-jaipur-gold/20 group hover:shadow-2xl transition duration-300">
+                    <div class="md:w-2/5 bg-jaipur-gold relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+                        <i class="fa-solid fa-bullhorn text-6xl text-white group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h3 class="font-heading text-2xl font-bold text-gray-800 mb-2">Campus Ambassador</h3>
+                        <p class="text-gray-600 text-sm mb-4">Apne college mein Startup Jaipur ke leader banein. Events organize karein aur network banayein.</p>
+                        <a href="#contact" class="text-jaipur-gold font-bold text-sm uppercase tracking-wider hover:underline">Join Program &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Idea Lab -->
+                <div class="flex flex-col md:flex-row bg-jaipur-sand rounded-2xl overflow-hidden shadow-lg border border-jaipur-gold/20 group hover:shadow-2xl transition duration-300">
+                    <div class="md:w-2/5 bg-jaipur-blue relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+                        <i class="fa-solid fa-flask text-6xl text-white group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h3 class="font-heading text-2xl font-bold text-gray-800 mb-2">Student Idea Lab</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kaccha idea hai? Hum usse pakka business plan banayenge. Free mentorship for students.</p>
+                        <a href="#contact" class="text-jaipur-blue font-bold text-sm uppercase tracking-wider hover:underline">Pitch Idea &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Pocket Money to Profits -->
+                <div class="flex flex-col md:flex-row bg-jaipur-sand rounded-2xl overflow-hidden shadow-lg border border-jaipur-gold/20 group hover:shadow-2xl transition duration-300">
+                    <div class="md:w-2/5 bg-green-600 relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+                        <i class="fa-solid fa-sack-dollar text-6xl text-white group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h3 class="font-heading text-2xl font-bold text-gray-800 mb-2">Side Hustle</h3>
+                        <p class="text-gray-600 text-sm mb-4">Padhai ke saath kamayi kaise karein? Freelancing aur small business ideas.</p>
+                        <a href="#contact" class="text-green-600 font-bold text-sm uppercase tracking-wider hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-jaipur-sand">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900">Sawaal <span class="text-jaipur-pink">Jawaab</span></h2>
+                <p class="mt-4 text-gray-600">Frequently Asked Questions.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg p-6 shadow-sm border-l-4 border-jaipur-gold hover:shadow-md transition cursor-pointer group">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-lg text-gray-900 group-hover:text-jaipur-pink transition">Kya registration free hai?</h3>
+                        <i class="fa-solid fa-circle-chevron-down text-jaipur-gold group-hover:text-jaipur-pink"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">Ji haan, Startup Jaipur community join karna bilkul free hai. Humara maqsad Rajasthan ke ecosystem ko badhava dena hai.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm border-l-4 border-jaipur-pink hover:shadow-md transition cursor-pointer group">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-lg text-gray-900 group-hover:text-jaipur-pink transition">Mere paas sirf idea hai, company nahi. Kya main join kar sakta hoon?</h3>
+                        <i class="fa-solid fa-circle-chevron-down text-jaipur-pink"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">Bilkul! Idea stage startups ke liye humare paas special mentorship sessions hote hain jo aapko MVP banane mein madad karenge.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm border-l-4 border-jaipur-blue hover:shadow-md transition cursor-pointer group">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-lg text-gray-900 group-hover:text-jaipur-pink transition">Funding kaise milegi?</h3>
+                        <i class="fa-solid fa-circle-chevron-down text-jaipur-blue group-hover:text-jaipur-pink"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">Hum apko Jaipur ke angel investors aur venture capitalists ke saath connect karvate hain, aur pitch deck banane mein bhi madad karte hain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="contact" class="py-20 bg-jaipur-deep relative">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row arch-card">
+                <div class="hidden md:block w-1/3 bg-jaipur-gold relative">
+                    <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+                    <div class="h-full flex flex-col items-center justify-center p-8 text-center text-jaipur-blue">
+                        <i class="fa-solid fa-rocket text-5xl mb-6"></i>
+                        <h3 class="font-heading text-2xl font-bold">Join the Revolution</h3>
+                        <p class="mt-4 text-sm font-medium">Hazaroon sapne, ek manzil.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 p-8 md:p-12">
+                    <h2 class="font-heading text-3xl font-bold text-gray-800 mb-2">Register Your Startup</h2>
+                    <p class="text-gray-500 mb-8 text-sm">Fill the form to join the network.</p>
+                    <form id="startupForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name</label>
+                                <input type="text" id="fullName" placeholder="Rahul Sharma" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-jaipur-pink bg-gray-50" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" id="phoneNumber" placeholder="+91 98765 43210" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-jaipur-pink bg-gray-50" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Startup Category</label>
+                            <select id="category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-jaipur-pink bg-gray-50">
+                                <option>Tech / IT</option>
+                                <option>Handicrafts / Art</option>
+                                <option>Food / Cafe</option>
+                                <option>Tourism</option>
+                                <option>Other Small Business</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Idea (Short Description)</label>
+                            <textarea id="idea" rows="3" placeholder="I want to start a..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-jaipur-pink bg-gray-50"></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" class="w-full bg-jaipur-pink text-white font-bold py-3 rounded-lg hover:bg-jaipur-deep transition shadow-lg mt-4 disabled:opacity-50">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN MODAL (Replaces the bottom section) -->
+    <div id="authModal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="toggleLoginModal()"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl border-t-4 border-jaipur-pink">
+                    
+                    <!-- Close Button -->
+                    <button onclick="toggleLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 focus:outline-none hover:bg-gray-100 rounded-full p-1 transition">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+
+                    <div class="p-8">
+                        <!-- 1. LOGIN FORM (Visible by default) -->
+                        <div id="loginPanel" class="max-w-md mx-auto">
+                            <div class="text-center mb-8">
+                                <div class="inline-block p-3 rounded-full bg-jaipur-sand mb-4">
+                                    <i class="fa-solid fa-lock text-2xl text-jaipur-deep"></i>
+                                </div>
+                                <h2 class="font-heading text-2xl font-bold text-gray-800">Login Portal</h2>
+                                <p class="text-sm text-gray-500 mt-2">Apne account mein login karein.</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Email Address</label>
+                                    <div class="relative">
+                                        <i class="fa-solid fa-envelope absolute left-3 top-3 text-gray-400"></i>
+                                        <input type="email" id="loginEmail" placeholder="name@example.com" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-jaipur-pink">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Password</label>
+                                    <div class="relative">
+                                        <i class="fa-solid fa-key absolute left-3 top-3 text-gray-400"></i>
+                                        <input type="password" id="loginPass" placeholder="••••••••" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-jaipur-pink">
+                                    </div>
+                                </div>
+                                
+                                <button onclick="handleLogin()" class="w-full bg-jaipur-blue text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition shadow-lg mt-2">
+                                    Login Securely
+                                </button>
+                                
+                                <p id="loginError" class="text-red-500 text-xs text-center mt-3 hidden font-bold">
+                                    <i class="fa-solid fa-circle-exclamation mr-1"></i> Galat Email ya Password!
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2. ADMIN DASHBOARD (Hidden by default) -->
+                        <div id="adminDashboard" class="hidden">
+                            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                                <div>
+                                    <h2 class="font-heading text-3xl font-bold text-jaipur-deep">Admin Dashboard</h2>
+                                    <p class="text-gray-500">Welcome back, Admin! Yahan naye registrations check karein.</p>
+                                </div>
+                                <button onclick="logout()" class="mt-4 md:mt-0 px-6 py-2 bg-red-50 text-red-500 rounded-full font-bold hover:bg-red-100 transition">
+                                    <i class="fa-solid fa-right-from-bracket mr-2"></i> Logout
+                                </button>
+                            </div>
+                            
+                            <!-- Stats Cards -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-jaipur-pink">
+                                    <div class="text-gray-500 text-xs uppercase font-bold">Total Registrations</div>
+                                    <div class="text-3xl font-bold text-gray-800 mt-2" id="totalCount">0</div>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-jaipur-gold">
+                                    <div class="text-gray-500 text-xs uppercase font-bold">Today's Entries</div>
+                                    <div class="text-3xl font-bold text-gray-800 mt-2" id="todayCount">0</div>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-jaipur-blue">
+                                    <div class="text-gray-500 text-xs uppercase font-bold">Pending Review</div>
+                                    <div class="text-3xl font-bold text-gray-800 mt-2" id="pendingCount">0</div>
+                                </div>
+                            </div>
+
+                            <!-- Data Table -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 max-h-[400px] overflow-y-auto">
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left text-sm">
+                                        <thead class="bg-jaipur-sand border-b border-gray-200 sticky top-0">
+                                            <tr>
+                                                <th class="p-4 font-bold text-gray-700">Date</th>
+                                                <th class="p-4 font-bold text-gray-700">Name</th>
+                                                <th class="p-4 font-bold text-gray-700">Phone</th>
+                                                <th class="p-4 font-bold text-gray-700">Category</th>
+                                                <th class="p-4 font-bold text-gray-700">Idea</th>
+                                                <th class="p-4 font-bold text-gray-700">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="submissionTableBody" class="divide-y divide-gray-100">
+                                            <!-- Data will come here via JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="noDataMsg" class="p-8 text-center text-gray-500 hidden">
+                                    Abhi koi data nahi hai.
+                                </div>
+                                <div id="loadingMsg" class="p-8 text-center text-jaipur-pink font-bold">
+                                    <i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Loading data...
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. USER DASHBOARD (Hidden by default) -->
+                        <div id="userDashboard" class="hidden">
+                            <div class="flex justify-between items-center mb-8">
+                                <div>
+                                    <h2 class="font-heading text-3xl font-bold text-jaipur-blue">User Dashboard</h2>
+                                    <p class="text-gray-500">Namaste! Aapka startup status yahan dekhein.</p>
+                                </div>
+                                <button onclick="logout()" class="px-6 py-2 bg-gray-100 text-gray-600 rounded-full font-bold hover:bg-gray-200 transition">
+                                    Logout
+                                </button>
+                            </div>
+
+                            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 text-center">
+                                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fa-solid fa-check text-3xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Registration Successful</h3>
+                                <p class="text-gray-600 max-w-lg mx-auto mb-8">
+                                    Aapka application "Startup Jaipur" team ke paas pahunch gaya hai. Humare mentors jald hi aapke idea ko review karenge.
+                                </p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-2xl mx-auto bg-gray-50 p-6 rounded-xl">
+                                    <div>
+                                        <div class="text-xs text-gray-500 uppercase font-bold">Application ID</div>
+                                        <div class="font-bold text-jaipur-pink">#JP-2024-001</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-gray-500 uppercase font-bold">Current Status</div>
+                                        <div class="inline-block px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold mt-1">Under Review</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-gray-500 uppercase font-bold">Next Step</div>
+                                        <div class="text-sm font-medium">Mentor Call (Expected in 24 hrs)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+    <footer class="bg-jaipur-blue pt-20 pb-10 text-white border-t-4 border-jaipur-gold">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <h1 class="font-heading font-bold text-3xl mb-6">Startup<span class="text-jaipur-pink">Jaipur</span></h1>
+                <p class="text-white/70 text-sm leading-relaxed mb-6">
+                    Startup Jaipur Rajasthan ka sabse bada aur dynamic innovation hub hai. Humara vision Pink City ko India ka agla Tech Capital banana hai.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-jaipur-gold uppercase text-xs">Resources</h4>
+                <ul class="space-y-4 text-sm text-white/50">
+                    <li><a href="#">Govt Schemes</a></li>
+                    <li><a href="#">Investor Network</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-jaipur-gold uppercase text-xs">Explore</h4>
+                <ul class="space-y-4 text-sm text-white/50">
+                    <li><a href="#about">Success Stories</a></li>
+                    <li><a href="#students">Student Hub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-jaipur-gold uppercase text-xs">Newsletter</h4>
+                <p class="text-xs text-white/50 mb-4">Email daliye aur updates paiye.</p>
+                <form id="newsletter-form" class="flex gap-2">
+                    <input type="email" id="news-email" required placeholder="Email" class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-sm w-full focus:outline-none">
+                    <button type="submit" id="news-btn" class="bg-jaipur-pink px-4 rounded-xl"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <p id="news-status" class="text-[10px] mt-2 hidden"></
