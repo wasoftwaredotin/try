@@ -12,7 +12,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Fonts (Added 'Kalam' for readable handwriting) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cinzel:wght@400;600;700&family=Josefin+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 
     <script>
@@ -23,11 +23,11 @@
                         jaipur: {
                             pink: '#d66d75', // Terra Cotta
                             light: '#e29587', // Lighter Pink
-                            deep: '#b3404a', // Deep Royal Red
+                            deep: '#8B0000', // Deep Royal Red
                             sand: '#fff9f0', // Creamy White
                             gold: '#d4af37', // Royal Gold
                             goldLight: '#f3e5ab',
-                            blue: '#1a2a3a', // Royal Navy
+                            blue: '#1a2a3a', // Navy
                         }
                     },
                     fontFamily: {
@@ -60,7 +60,7 @@
     <style>
         /* Royal Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #FFF0F5; }
+        ::-webkit-scrollbar-track { background: #8B0000; }
         ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #d4af37, #d66d75); border-radius: 10px; }
         
         /* Updated Navbar Style (Solid White & Thin Black Borders) */
@@ -200,28 +200,35 @@
                 </a>
             </div>
 
-            <!-- Stats (2x2 Layout) -->
-            <div class="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto animate-fade-up px-2" style="animation-delay: 0.8s;">
-                <div class="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">500+</div>
-                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Startups</div>
+            <!-- Stats (UPDATED: Split 2 Left / 2 Right with Gap) -->
+            <div class="mt-12 md:mt-20 flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-8 md:gap-32 animate-fade-up px-4" style="animation-delay: 0.8s;">
+                <!-- Left Group -->
+                <div class="grid grid-cols-2 gap-4 w-full md:w-auto flex-1">
+                    <div class="py-5 px-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300 flex flex-col justify-center items-center">
+                        <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">500+</div>
+                        <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Startups</div>
+                    </div>
+                    <div class="py-5 px-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300 flex flex-col justify-center items-center">
+                        <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">₹10Cr+</div>
+                        <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Funding</div>
+                    </div>
                 </div>
-                <div class="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">₹10Cr+</div>
-                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Funding</div>
-                </div>
-                <div class="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">50+</div>
-                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Mentors</div>
-                </div>
-                <div class="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">24/7</div>
-                    <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Support</div>
+                
+                <!-- Right Group -->
+                <div class="grid grid-cols-2 gap-4 w-full md:w-auto flex-1">
+                    <div class="py-5 px-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300 flex flex-col justify-center items-center">
+                        <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">50+</div>
+                        <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Mentors</div>
+                    </div>
+                    <div class="py-5 px-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300 flex flex-col justify-center items-center">
+                        <div class="text-2xl md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5">24/7</div>
+                        <div class="text-[10px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Support</div>
+                    </div>
                 </div>
             </div>
 
             <!-- Feature Tags -->
-            <div class="mt-6 flex flex-wrap justify-center gap-3 animate-fade-up px-2 pb-16 md:pb-0" style="animation-delay: 1s;">
+            <div class="mt-8 flex flex-wrap justify-center gap-3 animate-fade-up px-2 pb-16 md:pb-0" style="animation-delay: 1s;">
                 <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm shadow-sm">
                     <i class="fa-solid fa-check-circle text-green-400 text-xs"></i>
                     <span class="text-white text-[10px] md:text-xs font-bold uppercase">Govt Grants</span>
@@ -1158,7 +1165,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 border-t border-white/10 pt-8 text-[10px] text-white/30 uppercase tracking-widest font-bold">
-            <p>&copy; 2026 Startup Jaipur. Fueling Innovation in Rajasthan.</p>
+            <p>&copy; 2020 Startup Jaipur. Fueling Innovation in Rajasthan.</p>
         </div>
     </footer>
 
