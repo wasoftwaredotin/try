@@ -97,49 +97,55 @@
             width: 200%;
             animation: marquee 20s linear infinite;
         }
+        
+        /* Updated Navbar Style (Solid & Bordered) */
+        .nav-custom {
+            background-color: #ffffff; /* Solid White */
+            border-top: 4px solid #d4af37; /* Top Gold Line */
+            border-bottom: 4px solid #d4af37; /* Bottom Gold Line */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="font-body bg-jaipur-sand text-gray-800 antialiased overflow-x-hidden selection:bg-jaipur-pink selection:text-white relative w-full">
 
-    <!-- Navigation (FIXED for Mobile Visibility) -->
-    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    <!-- Navigation (Updated: Thinner, Borders, White Background) -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-500 nav-custom">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 md:h-24 gap-1">
+            <!-- Height reduced: h-16 (mobile) to h-20 (desktop) -->
+            <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                 
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-1 md:gap-2 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                    <div class="relative flex items-center justify-center mt-2 md:mt-4">
-                        <i class="fa-solid fa-rocket text-[#b3404a] text-3xl md:text-5xl -rotate-45 transition-transform duration-300 group-hover:-translate-y-1"></i>
+                    <div class="relative flex items-center justify-center mt-1 md:mt-2">
+                        <i class="fa-solid fa-rocket text-[#b3404a] text-2xl md:text-4xl -rotate-45 transition-transform duration-300 group-hover:-translate-y-1"></i>
                     </div>
                     <div class="flex flex-col items-start justify-center">
-                        <!-- Adjusted font size for mobile to ensure space for right buttons -->
-                        <h1 class="font-heading font-bold text-xl sm:text-2xl md:text-5xl text-gray-900 tracking-wide md:tracking-widest leading-none group-hover:text-jaipur-deep transition-colors whitespace-nowrap">
+                        <h1 class="font-heading font-bold text-lg sm:text-xl md:text-4xl text-gray-900 tracking-wide md:tracking-widest leading-none group-hover:text-jaipur-deep transition-colors whitespace-nowrap">
                             Startup<span class="text-[#b3404a]">Jaipur</span>
                         </h1>
                     </div>
                 </div>
 
-                <!-- Menu Container (Flex-shrink-0 ensures it never collapses) -->
+                <!-- Menu Container -->
                 <div class="flex items-center gap-2 md:gap-3 z-50 flex-shrink-0">
-                    <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-3 py-1.5 md:px-4 md:py-2 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95 origin-right">
+                    <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-2 py-1.5 md:px-4 md:py-1.5 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95 origin-right">
                         <div class="absolute top-0 left-0 w-3 h-3 border-t-[2px] border-l-[2px] border-[#d4af37] rounded-tl-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
                         <div class="absolute bottom-0 right-0 w-3 h-3 border-b-[2px] border-r-[2px] border-[#d4af37] rounded-br-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
                         <div class="relative z-10 flex items-center gap-1 md:gap-2">
                             <i class="fa-brands fa-whatsapp text-sm md:text-lg text-[#25D366]"></i>
-                            <!-- Reduced tracking on mobile to fit "Join WhatsApp Group" -->
-                            <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-tight md:tracking-[0.15em] text-[#d4af37] font-luxury whitespace-nowrap">Join WhatsApp Group</span>
+                            <span class="text-[7px] md:text-[9px] font-bold uppercase tracking-tighter md:tracking-[0.15em] text-[#d4af37] font-luxury whitespace-nowrap">Join WhatsApp Group</span>
                         </div>
                     </a>
                     
-                    <!-- Menu Button (Always Visible) -->
-                    <button id="mobile-menu-btn" class="relative group w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full bg-white/90 backdrop-blur-md shadow-lg transition-transform active:scale-95 ml-1">
-                        <div class="absolute inset-0 rounded-full border-[3px] border-transparent border-t-jaipur-gold border-r-jaipur-pink border-b-jaipur-blue border-l-transparent animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
-                        <div class="absolute inset-[4px] rounded-full bg-jaipur-sand/50 backdrop-blur-sm z-0"></div>
-                        <div class="relative z-10 flex flex-col items-center justify-center gap-[4px] md:gap-[5px] w-5 md:w-6">
+                    <!-- Menu Button -->
+                    <button id="mobile-menu-btn" class="relative group w-9 h-9 md:w-11 md:h-11 flex justify-center items-center rounded-full bg-jaipur-sand/20 border border-gray-100 hover:bg-jaipur-sand/50 transition-all active:scale-95 ml-1">
+                        <div class="absolute inset-0 rounded-full border-[2px] border-transparent border-t-jaipur-gold border-r-jaipur-pink border-b-jaipur-blue border-l-transparent animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
+                        <div class="relative z-10 flex flex-col items-center justify-center gap-[3px] md:gap-[4px] w-4 md:w-5">
                             <span id="line1" class="w-full h-[2px] bg-gradient-to-r from-jaipur-deep to-jaipur-pink rounded-full transition-all duration-300 origin-center"></span>
                             <div id="line2" class="flex items-center justify-between w-full transition-opacity duration-300">
-                                <span class="w-[3px] h-[3px] bg-jaipur-gold rounded-full"></span>
-                                <span class="w-[12px] md:w-[16px] h-[2px] bg-gradient-to-r from-jaipur-gold to-jaipur-deep rounded-full"></span>
+                                <span class="w-[2px] h-[2px] bg-jaipur-gold rounded-full"></span>
+                                <span class="w-[10px] md:w-[14px] h-[2px] bg-gradient-to-r from-jaipur-gold to-jaipur-deep rounded-full"></span>
                             </div>
                             <span id="line3" class="w-full h-[2px] bg-gradient-to-r from-jaipur-pink to-jaipur-deep rounded-full transition-all duration-300 origin-center"></span>
                         </div>
@@ -149,7 +155,7 @@
         </div>
 
         <!-- Menu Panel -->
-        <div id="mobile-menu" class="hidden bg-white border-t border-jaipur-gold/20 absolute w-full shadow-2xl transition-all duration-300 top-20 md:top-24 left-0 z-40">
+        <div id="mobile-menu" class="hidden bg-white border-t-4 border-jaipur-gold absolute w-full shadow-2xl transition-all duration-300 top-16 md:top-20 left-0 z-40">
             <a href="#about" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">About Us</a>
             <a href="#sectors" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Sectors</a>
             <a href="#services" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Services</a>
@@ -163,22 +169,25 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Optimized for Mobile) -->
-    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-20 pb-12 overflow-hidden">
+        <!-- ORIGINAL HERO COLOR GRADIENT RESTORED -->
         <div class="absolute inset-0 bg-gradient-to-br from-jaipur-deep via-jaipur-pink to-[#e67e22] z-0"></div>
         <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
+        
+        <!-- Animated Blobs -->
         <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
         <div class="absolute bottom-20 right-10 w-64 h-64 bg-jaipur-gold/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
         
-        <!-- Scrolling Ad Strip (Marquee) at Bottom (Replaces Divider) -->
-        <div class="absolute bottom-0 left-0 w-full bg-jaipur-gold border-t border-jaipur-deep/20 overflow-hidden z-20 py-3 shadow-lg">
+        <!-- Scrolling Ad Strip (Vigyapan Patti) at Bottom -->
+        <div class="absolute bottom-0 left-0 w-full bg-jaipur-gold border-t border-jaipur-deep/20 overflow-hidden z-20 py-2 md:py-3 shadow-lg">
             <div class="animate-marquee whitespace-nowrap flex items-center text-jaipur-deep font-bold text-xs md:text-sm tracking-widest uppercase font-luxury">
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
                 <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Supported</span>
                 <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
                 <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 98765 43210</span>
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Join Rajasthan's Biggest Startup Hub</span>
-                <!-- Duplicate for seamless loop -->
+                <!-- Duplicate -->
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
                 <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Supported</span>
                 <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
@@ -192,7 +201,7 @@
             <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-jaipur-gold/50 rounded-full bg-transparent shadow-xl mb-6 animate-fade-up backdrop-blur-sm">
                 <span class="text-white font-bold tracking-widest text-[10px] md:text-xs uppercase font-luxury">The Pink City Startup Hub</span>
             </div>
-            <!-- Updated Heading with Fixed Clipping -->
+            <!-- Updated Heading -->
             <h1 class="mb-6 leading-tight text-white drop-shadow-lg animate-fade-up" style="animation-delay: 0.2s;">
                 <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-none">Build Your Dream</span>
                 <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold to-white mt-1 pb-6">in Jaipur</span>
@@ -202,7 +211,7 @@
                 Connect with investors, find co-founders, and grow your business in the heart of the Pink City.
             </p>
             
-            <!-- Modified Buttons: Side by Side on Mobile -->
+            <!-- Modified Buttons -->
             <div class="flex flex-row gap-3 justify-center animate-fade-up w-full px-2" style="animation-delay: 0.6s;">
                 <a href="#contact" class="flex-1 md:flex-none px-4 py-3 bg-jaipur-gold text-jaipur-blue rounded-full font-bold text-xs md:text-base hover:bg-white hover:scale-105 transition-all shadow-xl shadow-jaipur-gold/30 btn-royal flex items-center justify-center gap-2 whitespace-nowrap">
                     Start Journey <i class="fa-solid fa-arrow-right-long"></i>
@@ -212,96 +221,31 @@
                 </a>
             </div>
 
-            <!-- Modified Stats: Single Line on Mobile -->
-            <div class="mt-8 md:mt-20 grid grid-cols-4 gap-2 md:gap-4 max-w-5xl mx-auto animate-fade-up px-1" style="animation-delay: 0.8s;">
-                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">500+</div>
-                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Startups</div>
+        <!-- Optimized Login Button -->
+        <div class="absolute top-20 right-2 md:top-24 md:right-8 z-40 animate-fade-up scale-75 origin-top-right md:scale-100" style="animation-delay: 1s;">
+            <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(214,109,117,0.5)] hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.6)]">
+                <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-jaipur-pink to-jaipur-blue rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
+                <div class="relative px-3 py-1.5 md:px-6 md:py-2 bg-white rounded-full flex items-center gap-2 md:gap-3 z-10 transition-colors duration-300 group-hover:bg-jaipur-sand">
+                    <i class="fa-solid fa-key text-jaipur-gold text-xs group-hover:rotate-45 transition-transform duration-300"></i>
+                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink group-hover:from-jaipur-gold group-hover:to-jaipur-blue transition-all duration-300">Login</span>
                 </div>
-                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">₹10Cr+</div>
-                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Funding</div>
-                </div>
-                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">50+</div>
-                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Mentors</div>
-                </div>
-                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
-                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">24/7</div>
-                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Support</div>
-                </div>
-            </div>
+            </button>
         </div>
     </section>
 
-    <!-- About Us (Moved UP - Now Below Hero) -->
-    <section id="about-us" class="pt-24 pb-0 bg-jaipur-sand relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="w-full lg:w-1/2 relative group">
-                    <!-- Reverted to desktop style: rounded-t-[10rem] for all screens -->
-                    <div class="absolute inset-0 border-[3px] border-jaipur-gold rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                    <!-- Reverted to desktop style: h-[500px] and rounded-t-[10rem] for all screens -->
-                    <div class="relative rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white h-[250px] md:h-[500px]">
-                        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop" alt="Jaipur Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-jaipur-deep/60 via-transparent to-transparent opacity-60"></div>
-                        <div class="absolute bottom-4 md:bottom-8 left-0 right-0 text-center">
-                            <div class="inline-block bg-white/90 backdrop-blur-md px-6 py-1.5 md:px-8 md:py-2 rounded-full shadow-lg border border-jaipur-gold/40">
-                                <span class="font-heading text-jaipur-deep font-bold text-lg md:text-xl">Since 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-12 h-12 md:w-16 md:h-16 bg-jaipur-sand rounded-full flex items-center justify-center text-2xl md:text-3xl text-jaipur-gold shadow-lg animate-spin-slow border border-jaipur-gold/20">
-                        <i class="fa-solid fa-sun"></i>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 text-left">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="h-[2px] w-12 bg-jaipur-gold"></div>
-                        <span class="font-script text-3xl text-jaipur-pink">Who We Are</span>
-                    </div>
-                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        Bridging <span class="text-jaipur-gold">Heritage</span> with <br>
-                        <span class="text-jaipur-deep">Innovation</span>
-                    </h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed font-light">
-                        <strong class="text-gray-900 font-medium">Startup Jaipur</strong> is not just an incubator; it is a movement. Located in the heart of India's Pink City, we are dedicated to transforming traditional businesses with modern technology while nurturing the next generation of tech unicorns.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed font-light">
-                        We provide a platform where artisans meet app developers, and students meet investors. Our mission is to put Jaipur on the global startup map.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 mb-10">
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-jaipur-gold/20 hover:border-jaipur-gold/50 transition">
-                            <div class="w-10 h-10 rounded-full bg-jaipur-sand flex items-center justify-center text-jaipur-deep shrink-0 shadow-sm border border-jaipur-deep/10">
-                                <i class="fa-solid fa-handshake"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 font-heading">Community</h4>
-                                <p class="text-xs text-gray-500 mt-1">Strong network of 500+ founders.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-jaipur-gold/20 hover:border-jaipur-gold/50 transition">
-                            <div class="w-10 h-10 rounded-full bg-jaipur-sand flex items-center justify-center text-jaipur-gold shrink-0 shadow-sm border border-jaipur-gold/10">
-                                <i class="fa-solid fa-lightbulb"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 font-heading">Mentorship</h4>
-                                <p class="text-xs text-gray-500 mt-1">Guidance from industry experts.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="group inline-flex items-center gap-2 text-jaipur-deep font-bold uppercase tracking-widest text-sm hover:text-jaipur-pink transition-colors">
-                        Read Our Story 
-                        <i class="fa-solid fa-arrow-right-long transform group-hover:translate-x-2 transition-transform"></i>
-                    </a>
-                </div>
+    <!-- NEW: Read Our Story Section (Arrow Indicator) -->
+    <div class="bg-white pt-10 pb-2 relative z-20 flex justify-center">
+        <a href="#about-us" class="flex flex-col items-center gap-2 group cursor-pointer transition-all hover:-translate-y-1">
+            <span class="font-heading font-bold text-jaipur-deep text-xs md:text-sm tracking-[0.2em] uppercase border-b border-transparent group-hover:border-jaipur-gold transition-all">Read Our Story</span>
+            <div class="w-8 h-8 rounded-full border border-jaipur-gold/30 flex items-center justify-center bg-jaipur-sand/50 group-hover:bg-jaipur-gold group-hover:text-white transition-all shadow-sm">
+                <i class="fa-solid fa-arrow-down text-jaipur-deep text-xs animate-bounce group-hover:text-white"></i>
             </div>
-        </div>
-    </section>
+        </a>
+    </div>
 
-    <!-- Our Vision (Royal & Beautiful Design) -->
-    <section class="pt-0 pb-24 relative overflow-hidden bg-white">
+    <!-- MOVED UP: Our Vision (Royal & Beautiful Design) -->
+    <!-- Changed pt-24 to pt-10 to accommodate the new Read Story section -->
+    <section class="pt-10 pb-24 relative overflow-hidden bg-white">
         <!-- Background Texture -->
         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 300px;"></div>
         
@@ -368,18 +312,75 @@
         </div>
     </section>
 
+    <!-- MOVED DOWN: About Us -->
+    <section id="about-us" class="pt-24 pb-0 bg-jaipur-sand relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative group">
+                    <!-- Reverted to desktop style: rounded-t-[10rem] for all screens -->
+                    <div class="absolute inset-0 border-[3px] border-jaipur-gold rounded-t-[10rem] rounded-b-3xl transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                    <!-- Reverted to desktop style: h-[500px] and rounded-t-[10rem] for all screens -->
+                    <div class="relative rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop" alt="Jaipur Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jaipur-deep/60 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 md:bottom-8 left-0 right-0 text-center">
+                            <div class="inline-block bg-white/90 backdrop-blur-md px-6 py-1.5 md:px-8 md:py-2 rounded-full shadow-lg border border-jaipur-gold/40">
+                                <span class="font-heading text-jaipur-deep font-bold text-lg md:text-xl">Since 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-12 h-12 md:w-16 md:h-16 bg-jaipur-sand rounded-full flex items-center justify-center text-2xl md:text-3xl text-jaipur-gold shadow-lg animate-spin-slow border border-jaipur-gold/20">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 text-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-[2px] w-12 bg-jaipur-gold"></div>
+                        <span class="font-script text-3xl text-jaipur-pink">Who We Are</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Bridging <span class="text-jaipur-gold">Heritage</span> with <br>
+                        <span class="text-jaipur-deep">Innovation</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed font-light">
+                        <strong class="text-gray-900 font-medium">Startup Jaipur</strong> is not just an incubator; it is a movement. Located in the heart of India's Pink City, we are dedicated to transforming traditional businesses with modern technology while nurturing the next generation of tech unicorns.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed font-light">
+                        We provide a platform where artisans meet app developers, and students meet investors. Our mission is to put Jaipur on the global startup map.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-10">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-jaipur-gold/20 hover:border-jaipur-gold/50 transition">
+                            <div class="w-10 h-10 rounded-full bg-jaipur-sand flex items-center justify-center text-jaipur-deep shrink-0 shadow-sm border border-jaipur-deep/10">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 font-heading">Community</h4>
+                                <p class="text-xs text-gray-500 mt-1">Strong network of 500+ founders.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-jaipur-gold/20 hover:border-jaipur-gold/50 transition">
+                            <div class="w-10 h-10 rounded-full bg-jaipur-sand flex items-center justify-center text-jaipur-gold shrink-0 shadow-sm border border-jaipur-gold/10">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 font-heading">Mentorship</h4>
+                                <p class="text-xs text-gray-500 mt-1">Guidance from industry experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="group inline-flex items-center gap-2 text-jaipur-deep font-bold uppercase tracking-widest text-sm hover:text-jaipur-pink transition-colors">
+                        Read Our Story 
+                        <i class="fa-solid fa-arrow-right-long transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- NEW: What is Startup Jaipur? (Redesigned - Clean & Detailed) -->
     <section class="pt-24 pb-12 bg-jaipur-sand relative overflow-hidden">
-        <!-- Decorative Background Pattern -->
-        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
-        
-        <!-- Gradient Orbs for Beauty -->
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-jaipur-pink/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-t from-jaipur-gold/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            
-            <!-- Header -->
             <div class="text-center mb-16">
                 <div class="inline-block px-4 py-1 rounded-full border border-jaipur-deep/20 bg-white/50 backdrop-blur-sm mb-4">
                     <span class="text-jaipur-deep text-xs font-bold tracking-[0.2em] uppercase">The Initiative</span>
