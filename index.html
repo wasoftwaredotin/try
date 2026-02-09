@@ -101,10 +101,10 @@
 </head>
 <body class="font-body bg-jaipur-sand text-gray-800 antialiased overflow-x-hidden selection:bg-jaipur-pink selection:text-white relative w-full">
 
-    <!-- Navigation -->
-    <nav class="glass-nav absolute top-0 left-0 w-full z-50 transition-all duration-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 md:h-24 gap-2">
+    <!-- Navigation (FIXED for Mobile Visibility) -->
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 md:h-24 gap-1">
                 
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-1 md:gap-2 cursor-pointer group" onclick="window.scrollTo(0,0)">
@@ -112,24 +112,26 @@
                         <i class="fa-solid fa-rocket text-[#b3404a] text-3xl md:text-5xl -rotate-45 transition-transform duration-300 group-hover:-translate-y-1"></i>
                     </div>
                     <div class="flex flex-col items-start justify-center">
-                        <h1 class="font-heading font-bold text-2xl md:text-5xl text-gray-900 tracking-widest leading-none group-hover:text-jaipur-deep transition-colors whitespace-nowrap">
+                        <!-- Adjusted font size for mobile to ensure space for right buttons -->
+                        <h1 class="font-heading font-bold text-xl sm:text-2xl md:text-5xl text-gray-900 tracking-wide md:tracking-widest leading-none group-hover:text-jaipur-deep transition-colors whitespace-nowrap">
                             Startup<span class="text-[#b3404a]">Jaipur</span>
                         </h1>
                     </div>
                 </div>
 
-                <!-- Menu Container -->
-                <div class="flex items-center gap-2 md:gap-3 z-50">
+                <!-- Menu Container (Flex-shrink-0 ensures it never collapses) -->
+                <div class="flex items-center gap-2 md:gap-3 z-50 flex-shrink-0">
                     <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-3 py-1.5 md:px-4 md:py-2 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95 origin-right">
                         <div class="absolute top-0 left-0 w-3 h-3 border-t-[2px] border-l-[2px] border-[#d4af37] rounded-tl-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
                         <div class="absolute bottom-0 right-0 w-3 h-3 border-b-[2px] border-r-[2px] border-[#d4af37] rounded-br-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
                         <div class="relative z-10 flex items-center gap-1 md:gap-2">
                             <i class="fa-brands fa-whatsapp text-sm md:text-lg text-[#25D366]"></i>
-                            <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] text-[#d4af37] font-luxury whitespace-nowrap">Join WhatsApp Group</span>
+                            <!-- Reduced tracking on mobile to fit "Join WhatsApp Group" -->
+                            <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-tight md:tracking-[0.15em] text-[#d4af37] font-luxury whitespace-nowrap">Join WhatsApp Group</span>
                         </div>
                     </a>
                     
-                    <!-- Menu Button -->
+                    <!-- Menu Button (Always Visible) -->
                     <button id="mobile-menu-btn" class="relative group w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full bg-white/90 backdrop-blur-md shadow-lg transition-transform active:scale-95 ml-1">
                         <div class="absolute inset-0 rounded-full border-[3px] border-transparent border-t-jaipur-gold border-r-jaipur-pink border-b-jaipur-blue border-l-transparent animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
                         <div class="absolute inset-[4px] rounded-full bg-jaipur-sand/50 backdrop-blur-sm z-0"></div>
@@ -162,14 +164,13 @@
     </nav>
 
     <!-- Hero Section (Optimized for Mobile) -->
-    <!-- Removed divider, added bottom border and marquee strip -->
     <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-jaipur-deep via-jaipur-pink to-[#e67e22] z-0"></div>
         <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
         <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
         <div class="absolute bottom-20 right-10 w-64 h-64 bg-jaipur-gold/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
         
-        <!-- Scrolling Ad Strip (Marquee) at Bottom -->
+        <!-- Scrolling Ad Strip (Marquee) at Bottom (Replaces Divider) -->
         <div class="absolute bottom-0 left-0 w-full bg-jaipur-gold border-t border-jaipur-deep/20 overflow-hidden z-20 py-3 shadow-lg">
             <div class="animate-marquee whitespace-nowrap flex items-center text-jaipur-deep font-bold text-xs md:text-sm tracking-widest uppercase font-luxury">
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
@@ -234,7 +235,6 @@
     </section>
 
     <!-- About Us (Moved UP - Now Below Hero) -->
-    <!-- Updated background color to bg-jaipur-sand to match divider -->
     <section id="about-us" class="pt-24 pb-0 bg-jaipur-sand relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -302,6 +302,7 @@
 
     <!-- Our Vision (Royal & Beautiful Design) -->
     <section class="pt-0 pb-24 relative overflow-hidden bg-white">
+        <!-- Background Texture -->
         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 300px;"></div>
         
         <!-- Animated Blobs -->
