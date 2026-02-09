@@ -86,6 +86,17 @@
         .btn-royal:hover::after { left: 100%; }
         .btn-royal:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(214, 109, 117, 0.5); }
         ::selection { background: #d66d75; color: #fff; }
+
+        /* Marquee Animation for Ad Strip */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 20s linear infinite;
+        }
     </style>
 </head>
 <body class="font-body bg-jaipur-sand text-gray-800 antialiased overflow-x-hidden selection:bg-jaipur-pink selection:text-white relative w-full">
@@ -151,21 +162,31 @@
     </nav>
 
     <!-- Hero Section (Optimized for Mobile) -->
-    <!-- Removed divider, adjusted pb-20 -->
-    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-24 pb-20 overflow-hidden">
+    <!-- Removed divider, added bottom border and marquee strip -->
+    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-jaipur-deep via-jaipur-pink to-[#e67e22] z-0"></div>
         <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
         <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
         <div class="absolute bottom-20 right-10 w-64 h-64 bg-jaipur-gold/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-0 left-0 right-0 z-10">
-            <svg viewBox="0 0 1440 100" fill="none" class="w-full h-auto text-jaipur-sand fill-current">
-                <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
-            </svg>
-        </div>
         
-        <!-- Divider Removed as requested -->
+        <!-- Scrolling Ad Strip (Marquee) at Bottom -->
+        <div class="absolute bottom-0 left-0 w-full bg-jaipur-gold border-t border-jaipur-deep/20 overflow-hidden z-20 py-3 shadow-lg">
+            <div class="animate-marquee whitespace-nowrap flex items-center text-jaipur-deep font-bold text-xs md:text-sm tracking-widest uppercase font-luxury">
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
+                <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Supported</span>
+                <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
+                <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 98765 43210</span>
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Join Rajasthan's Biggest Startup Hub</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
+                <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Supported</span>
+                <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
+                <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 98765 43210</span>
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Join Rajasthan's Biggest Startup Hub</span>
+            </div>
+        </div>
 
-        <div class="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center z-10 mt-4 md:mt-16">
+        <div class="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center z-30 mt-4 md:mt-16 mb-8">
             <!-- Background changed to bg-transparent, added backdrop-blur-sm, text changed to text-white for visibility -->
             <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-jaipur-gold/50 rounded-full bg-transparent shadow-xl mb-6 animate-fade-up backdrop-blur-sm">
                 <span class="text-white font-bold tracking-widest text-[10px] md:text-xs uppercase font-luxury">The Pink City Startup Hub</span>
@@ -173,8 +194,9 @@
             <!-- Updated Heading with Fixed Clipping -->
             <h1 class="mb-6 leading-tight text-white drop-shadow-lg animate-fade-up" style="animation-delay: 0.2s;">
                 <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-none">Build Your Dream</span>
-                <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold to-white mt-1 pb-4">in Jaipur</span>
+                <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold to-white mt-1 pb-6">in Jaipur</span>
             </h1>
+            
             <p class="text-sm md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light animate-fade-up" style="animation-delay: 0.4s;">
                 Connect with investors, find co-founders, and grow your business in the heart of the Pink City.
             </p>
@@ -209,26 +231,18 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Optimized Login Button for Mobile -->
-        <div class="absolute top-20 right-2 md:top-28 md:right-8 z-40 animate-fade-up scale-75 origin-top-right md:scale-100" style="animation-delay: 1s;">
-            <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(214,109,117,0.5)] hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.6)]">
-                <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-jaipur-pink to-jaipur-blue rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
-                <div class="relative px-3 py-1.5 md:px-6 md:py-2 bg-white rounded-full flex items-center gap-2 md:gap-3 z-10 transition-colors duration-300 group-hover:bg-jaipur-sand">
-                    <i class="fa-solid fa-key text-jaipur-gold text-xs group-hover:rotate-45 transition-transform duration-300"></i>
-                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink group-hover:from-jaipur-gold group-hover:to-jaipur-blue transition-all duration-300">Login</span>
-                </div>
-            </button>
-        </div>
     </section>
 
     <!-- About Us (Moved UP - Now Below Hero) -->
+    <!-- Updated background color to bg-jaipur-sand to match divider -->
     <section id="about-us" class="pt-24 pb-0 bg-jaipur-sand relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="w-full lg:w-1/2 relative group">
+                    <!-- Reverted to desktop style: rounded-t-[10rem] for all screens -->
                     <div class="absolute inset-0 border-[3px] border-jaipur-gold rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                    <!-- Reverted to desktop style: h-[500px] and rounded-t-[10rem] for all screens -->
                     <div class="relative rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white h-[250px] md:h-[500px]">
                         <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop" alt="Jaipur Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-jaipur-deep/60 via-transparent to-transparent opacity-60"></div>
@@ -288,7 +302,6 @@
 
     <!-- Our Vision (Royal & Beautiful Design) -->
     <section class="pt-0 pb-24 relative overflow-hidden bg-white">
-        <!-- Background Texture -->
         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 300px;"></div>
         
         <!-- Animated Blobs -->
