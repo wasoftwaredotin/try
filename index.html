@@ -97,55 +97,47 @@
             width: 200%;
             animation: marquee 20s linear infinite;
         }
-        
-        /* Updated Navbar Style (Solid & Bordered) */
-        .nav-custom {
-            background-color: #ffffff; /* Solid White */
-            border-top: 4px solid #d4af37; /* Top Gold Line */
-            border-bottom: 4px solid #d4af37; /* Bottom Gold Line */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
     </style>
 </head>
 <body class="font-body bg-jaipur-sand text-gray-800 antialiased overflow-x-hidden selection:bg-jaipur-pink selection:text-white relative w-full">
 
-    <!-- Navigation (Updated: Thinner, Borders, White Background) -->
-    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-500 nav-custom">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <!-- Height reduced: h-16 (mobile) to h-20 (desktop) -->
-            <div class="flex justify-between items-center h-16 md:h-20 gap-1">
+    <!-- Navigation -->
+    <nav class="glass-nav absolute top-0 left-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 md:h-24 gap-2">
                 
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-1 md:gap-2 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                    <div class="relative flex items-center justify-center mt-1 md:mt-2">
-                        <i class="fa-solid fa-rocket text-[#b3404a] text-2xl md:text-4xl -rotate-45 transition-transform duration-300 group-hover:-translate-y-1"></i>
+                    <div class="relative flex items-center justify-center mt-2 md:mt-4">
+                        <i class="fa-solid fa-rocket text-[#b3404a] text-3xl md:text-5xl -rotate-45 transition-transform duration-300 group-hover:-translate-y-1"></i>
                     </div>
                     <div class="flex flex-col items-start justify-center">
-                        <h1 class="font-heading font-bold text-lg sm:text-xl md:text-4xl text-gray-900 tracking-wide md:tracking-widest leading-none group-hover:text-jaipur-deep transition-colors whitespace-nowrap">
+                        <h1 class="font-heading font-bold text-2xl md:text-5xl text-gray-900 tracking-widest leading-none group-hover:text-jaipur-deep transition-colors whitespace-nowrap">
                             Startup<span class="text-[#b3404a]">Jaipur</span>
                         </h1>
                     </div>
                 </div>
 
                 <!-- Menu Container -->
-                <div class="flex items-center gap-2 md:gap-3 z-50 flex-shrink-0">
-                    <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-2 py-1.5 md:px-4 md:py-1.5 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95 origin-right">
+                <div class="flex items-center gap-2 md:gap-3 z-50">
+                    <a href="https://chat.whatsapp.com/your-link" target="_blank" class="relative group px-3 py-1.5 md:px-4 md:py-2 flex items-center justify-center bg-transparent transition-all duration-300 active:scale-95 origin-right">
                         <div class="absolute top-0 left-0 w-3 h-3 border-t-[2px] border-l-[2px] border-[#d4af37] rounded-tl-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
                         <div class="absolute bottom-0 right-0 w-3 h-3 border-b-[2px] border-r-[2px] border-[#d4af37] rounded-br-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500 ease-out shadow-[0_0_10px_rgba(212,175,55,0.2)]"></div>
                         <div class="relative z-10 flex items-center gap-1 md:gap-2">
                             <i class="fa-brands fa-whatsapp text-sm md:text-lg text-[#25D366]"></i>
-                            <span class="text-[7px] md:text-[9px] font-bold uppercase tracking-tighter md:tracking-[0.15em] text-[#d4af37] font-luxury whitespace-nowrap">Join WhatsApp Group</span>
+                            <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] text-[#d4af37] font-luxury whitespace-nowrap">Join WhatsApp Group</span>
                         </div>
                     </a>
                     
                     <!-- Menu Button -->
-                    <button id="mobile-menu-btn" class="relative group w-9 h-9 md:w-11 md:h-11 flex justify-center items-center rounded-full bg-jaipur-sand/20 border border-gray-100 hover:bg-jaipur-sand/50 transition-all active:scale-95 ml-1">
-                        <div class="absolute inset-0 rounded-full border-[2px] border-transparent border-t-jaipur-gold border-r-jaipur-pink border-b-jaipur-blue border-l-transparent animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
-                        <div class="relative z-10 flex flex-col items-center justify-center gap-[3px] md:gap-[4px] w-4 md:w-5">
+                    <button id="mobile-menu-btn" class="relative group w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full bg-white/90 backdrop-blur-md shadow-lg transition-transform active:scale-95 ml-1">
+                        <div class="absolute inset-0 rounded-full border-[3px] border-transparent border-t-jaipur-gold border-r-jaipur-pink border-b-jaipur-blue border-l-transparent animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
+                        <div class="absolute inset-[4px] rounded-full bg-jaipur-sand/50 backdrop-blur-sm z-0"></div>
+                        <div class="relative z-10 flex flex-col items-center justify-center gap-[4px] md:gap-[5px] w-5 md:w-6">
                             <span id="line1" class="w-full h-[2px] bg-gradient-to-r from-jaipur-deep to-jaipur-pink rounded-full transition-all duration-300 origin-center"></span>
                             <div id="line2" class="flex items-center justify-between w-full transition-opacity duration-300">
-                                <span class="w-[2px] h-[2px] bg-jaipur-gold rounded-full"></span>
-                                <span class="w-[10px] md:w-[14px] h-[2px] bg-gradient-to-r from-jaipur-gold to-jaipur-deep rounded-full"></span>
+                                <span class="w-[3px] h-[3px] bg-jaipur-gold rounded-full"></span>
+                                <span class="w-[12px] md:w-[16px] h-[2px] bg-gradient-to-r from-jaipur-gold to-jaipur-deep rounded-full"></span>
                             </div>
                             <span id="line3" class="w-full h-[2px] bg-gradient-to-r from-jaipur-pink to-jaipur-deep rounded-full transition-all duration-300 origin-center"></span>
                         </div>
@@ -155,7 +147,7 @@
         </div>
 
         <!-- Menu Panel -->
-        <div id="mobile-menu" class="hidden bg-white border-t-4 border-jaipur-gold absolute w-full shadow-2xl transition-all duration-300 top-16 md:top-20 left-0 z-40">
+        <div id="mobile-menu" class="hidden bg-white border-t border-jaipur-gold/20 absolute w-full shadow-2xl transition-all duration-300 top-20 md:top-24 left-0 z-40">
             <a href="#about" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">About Us</a>
             <a href="#sectors" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Sectors</a>
             <a href="#services" class="block px-6 py-4 text-gray-800 font-medium hover:bg-jaipur-sand hover:text-jaipur-pink border-b border-gray-100">Services</a>
@@ -169,25 +161,30 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-20 pb-12 overflow-hidden">
-        <!-- ORIGINAL HERO COLOR GRADIENT RESTORED -->
+    <!-- Hero Section (Optimized for Mobile) -->
+    <!-- Reduced pb-20 to pb-8 to reduce gap -->
+    <section class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center pt-24 pb-8 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-jaipur-deep via-jaipur-pink to-[#e67e22] z-0"></div>
         <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
-        
-        <!-- Animated Blobs -->
         <div class="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
         <div class="absolute bottom-20 right-10 w-64 h-64 bg-jaipur-gold/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
         
-        <!-- Scrolling Ad Strip (Vigyapan Patti) at Bottom -->
-        <div class="absolute bottom-0 left-0 w-full bg-jaipur-gold border-t border-jaipur-deep/20 overflow-hidden z-20 py-2 md:py-3 shadow-lg">
+        <!-- Original Simple Wave (Single Color) - Kept for smooth transition -->
+        <div class="absolute bottom-0 left-0 right-0 z-10">
+            <svg viewBox="0 0 1440 100" fill="none" class="w-full h-auto text-jaipur-sand fill-current">
+                <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
+            </svg>
+        </div>
+        
+        <!-- Scrolling Ad Strip (Marquee) at Bottom -->
+        <div class="absolute bottom-0 left-0 w-full bg-jaipur-gold border-t border-jaipur-deep/20 overflow-hidden z-20 py-3 shadow-lg">
             <div class="animate-marquee whitespace-nowrap flex items-center text-jaipur-deep font-bold text-xs md:text-sm tracking-widest uppercase font-luxury">
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
                 <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Supported</span>
                 <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
                 <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 98765 43210</span>
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Join Rajasthan's Biggest Startup Hub</span>
-                <!-- Duplicate -->
+                <!-- Duplicate for seamless loop -->
                 <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2025</span>
                 <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Supported</span>
                 <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
@@ -196,12 +193,13 @@
             </div>
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center z-30 mt-4 md:mt-16 mb-8">
+        <!-- Updated z-index from z-10 to z-30 to show content above divider -->
+        <div class="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center z-30 mt-4 md:mt-16">
             <!-- Background changed to bg-transparent, added backdrop-blur-sm, text changed to text-white for visibility -->
             <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-jaipur-gold/50 rounded-full bg-transparent shadow-xl mb-6 animate-fade-up backdrop-blur-sm">
                 <span class="text-white font-bold tracking-widest text-[10px] md:text-xs uppercase font-luxury">The Pink City Startup Hub</span>
             </div>
-            <!-- Updated Heading -->
+            <!-- Updated Heading with Fixed Clipping -->
             <h1 class="mb-6 leading-tight text-white drop-shadow-lg animate-fade-up" style="animation-delay: 0.2s;">
                 <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-none">Build Your Dream</span>
                 <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold to-white mt-1 pb-6">in Jaipur</span>
@@ -211,7 +209,7 @@
                 Connect with investors, find co-founders, and grow your business in the heart of the Pink City.
             </p>
             
-            <!-- Modified Buttons -->
+            <!-- Modified Buttons: Side by Side on Mobile -->
             <div class="flex flex-row gap-3 justify-center animate-fade-up w-full px-2" style="animation-delay: 0.6s;">
                 <a href="#contact" class="flex-1 md:flex-none px-4 py-3 bg-jaipur-gold text-jaipur-blue rounded-full font-bold text-xs md:text-base hover:bg-white hover:scale-105 transition-all shadow-xl shadow-jaipur-gold/30 btn-royal flex items-center justify-center gap-2 whitespace-nowrap">
                     Start Journey <i class="fa-solid fa-arrow-right-long"></i>
@@ -221,7 +219,28 @@
                 </a>
             </div>
 
-        <!-- Optimized Login Button -->
+            <!-- Modified Stats: Single Line on Mobile -->
+            <div class="mt-8 md:mt-20 grid grid-cols-4 gap-2 md:gap-4 max-w-5xl mx-auto animate-fade-up px-1" style="animation-delay: 0.8s;">
+                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">500+</div>
+                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Startups</div>
+                </div>
+                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">₹10Cr+</div>
+                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Funding</div>
+                </div>
+                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">50+</div>
+                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Mentors</div>
+                </div>
+                <div class="p-2 md:p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition duration-300">
+                    <div class="text-sm md:text-4xl font-heading font-bold text-jaipur-gold mb-0.5 md:mb-1">24/7</div>
+                    <div class="text-[8px] md:text-xs uppercase tracking-wider text-white/80 leading-tight">Support</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optimized Login Button for Mobile -->
         <div class="absolute top-20 right-2 md:top-24 md:right-8 z-40 animate-fade-up scale-75 origin-top-right md:scale-100" style="animation-delay: 1s;">
             <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(214,109,117,0.5)] hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.6)]">
                 <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-jaipur-pink to-jaipur-blue rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
@@ -234,7 +253,8 @@
     </section>
 
     <!-- NEW: Read Our Story Section (Arrow Indicator) -->
-    <div class="bg-white pt-10 pb-2 relative z-20 flex justify-center">
+    <!-- Reduced pt from 10 to 4 -->
+    <div class="bg-white pt-4 pb-2 relative z-20 flex justify-center">
         <a href="#about-us" class="flex flex-col items-center gap-2 group cursor-pointer transition-all hover:-translate-y-1">
             <span class="font-heading font-bold text-jaipur-deep text-xs md:text-sm tracking-[0.2em] uppercase border-b border-transparent group-hover:border-jaipur-gold transition-all">Read Our Story</span>
             <div class="w-8 h-8 rounded-full border border-jaipur-gold/30 flex items-center justify-center bg-jaipur-sand/50 group-hover:bg-jaipur-gold group-hover:text-white transition-all shadow-sm">
@@ -244,8 +264,8 @@
     </div>
 
     <!-- MOVED UP: Our Vision (Royal & Beautiful Design) -->
-    <!-- Changed pt-24 to pt-10 to accommodate the new Read Story section -->
-    <section class="pt-10 pb-24 relative overflow-hidden bg-white">
+    <!-- Removed shadow, rounded corners, and side borders. Added top/bottom gold border. Full width. -->
+    <section class="pt-0 pb-24 relative overflow-hidden bg-white">
         <!-- Background Texture -->
         <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 300px;"></div>
         
@@ -253,13 +273,13 @@
         <div class="absolute top-0 right-0 w-96 h-96 bg-jaipur-gold/10 rounded-full blur-3xl animate-float opacity-60"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-jaipur-pink/10 rounded-full blur-3xl animate-float opacity-60" style="animation-delay: 2s;"></div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Changed max-w to w-full and removed px to allow full width image -->
+        <div class="w-full relative z-10 border-t-4 border-b-4 border-jaipur-gold">
             
             <!-- The Royal Card (Clean Single Frame) -->
             <div class="relative group">
-                <div class="relative bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100">
-                    <!-- Top Gold Bar -->
-                    <div class="h-2 w-full bg-gradient-to-r from-jaipur-deep via-jaipur-pink to-jaipur-gold"></div>
+                <div class="relative bg-white overflow-hidden">
+                    <!-- Top Gold Bar Removed as requested (only border top/bottom for section) -->
 
                     <div class="grid md:grid-cols-2">
                         <!-- Image Side (UPDATED IMAGE) -->
@@ -276,10 +296,6 @@
 
                         <!-- Content Side -->
                         <div class="p-8 md:p-12 flex flex-col justify-center relative">
-                            <!-- Decorative Corner (Kept inside, subtle) -->
-                            <div class="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-jaipur-gold/30 rounded-tr-3xl"></div>
-                            <div class="absolute bottom-6 left-6 w-16 h-16 border-b-2 border-l-2 border-jaipur-gold/30 rounded-bl-3xl"></div>
-
                             <div class="mb-6">
                                 <h2 class="font-heading text-4xl font-bold text-gray-900">Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-pink to-jaipur-deep">Vision</span></h2>
                                 <div class="w-20 h-1 bg-jaipur-gold mt-2 rounded-full"></div>
