@@ -63,11 +63,11 @@
         ::-webkit-scrollbar-track { background: #FFF0F5; }
         ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #d4af37, #d66d75); border-radius: 10px; }
         
-        /* Navbar Style */
+        /* Updated Navbar Style (Only Top Border) */
         .nav-custom {
             background-color: #ffffff;
-            border-top: 2px solid #000000;
-            border-bottom: 2px solid #000000;
+            border-top: 2px solid #000000; /* Top Black Line Kept */
+            border-bottom: none; /* Bottom Black Line Removed */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
@@ -253,7 +253,7 @@
             </div>
 
             <!-- Feature Tags -->
-            <div class="mt-6 flex flex-wrap justify-center gap-3 animate-fade-up px-2 pb-16 md:pb-0" style="animation-delay: 1s;">
+            <div class="mt-6 flex flex-wrap justify-center gap-3 animate-fade-up px-2" style="animation-delay: 1s;">
                 <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/20 backdrop-blur-sm shadow-sm">
                     <i class="fa-solid fa-check-circle text-green-300 text-xs"></i>
                     <span class="text-white text-[10px] md:text-xs font-bold uppercase">Govt Grants</span>
@@ -267,10 +267,23 @@
                     <span class="text-white text-[10px] md:text-xs font-bold uppercase">Legal Support</span>
                 </div>
             </div>
+
+            <!-- NEW: Community Trust / Social Proof (Added here) -->
+            <div class="mt-8 flex flex-col items-center justify-center animate-fade-up pb-20 md:pb-8" style="animation-delay: 1.2s;">
+                <div class="flex -space-x-3 rtl:space-x-reverse mb-2">
+                    <img class="w-8 h-8 border-2 border-white rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Founder" onerror="this.src='https://ui-avatars.com/api/?name=S+J&background=random'">
+                    <img class="w-8 h-8 border-2 border-white rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Founder" onerror="this.src='https://ui-avatars.com/api/?name=R+S&background=random'">
+                    <img class="w-8 h-8 border-2 border-white rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64" alt="Founder" onerror="this.src='https://ui-avatars.com/api/?name=A+K&background=random'">
+                    <img class="w-8 h-8 border-2 border-white rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="Founder" onerror="this.src='https://ui-avatars.com/api/?name=P+M&background=random'">
+                    <div class="flex items-center justify-center w-8 h-8 text-[10px] font-bold text-jaipur-deep bg-jaipur-gold border-2 border-white rounded-full hover:bg-white transition-colors cursor-pointer">+2k</div>
+                </div>
+                <p class="text-white/90 text-xs font-medium tracking-wide">Join <span class="text-jaipur-gold font-bold">2,000+</span> Founders in Jaipur</p>
+            </div>
+
         </div>
         
         <!-- Optimized Login Button (Small size) -->
-        <div class="absolute top-20 right-2 md:top-24 md:right-8 z-40 animate-fade-up scale-[0.6] md:scale-100 origin-top-right" style="animation-delay: 1s;">
+        <div class="absolute top-20 right-2 md:top-24 md:right-8 z-40 animate-fade-up scale-[0.6] md:scale-90 origin-top-right" style="animation-delay: 1s;">
             <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(212,175,55,0.5)]">
                 <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-white to-jaipur-gold rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
                 <!-- Changed bg to Pink -->
