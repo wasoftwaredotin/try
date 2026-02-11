@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Startup Jaipur | The Royal Hub of Innovation</title>
     
     <!-- Tailwind CSS -->
@@ -118,9 +118,15 @@
             animation: blob-shape 4s ease-in-out infinite;
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
         }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
     </style>
 </head>
-<body class="font-body rajasthani-pattern text-jaipur-deep antialiased overflow-x-hidden selection:bg-jaipur-gold selection:text-white relative w-full">
+<body class="font-body rajasthani-pattern text-jaipur-deep antialiased selection:bg-jaipur-gold selection:text-white relative w-full">
 
     <div class="fixed inset-0 mandana-bg pointer-events-none z-0"></div>
 
@@ -141,7 +147,7 @@
     </div>
 
     <!-- Navigation: ABSOLUTE (Scrolls with page) -->
-    <nav class="absolute top-8 left-0 w-full z-50 transition-all duration-500 nav-custom">
+    <nav class="absolute top-8 left-0 w-full z-50 transition-all duration-500 nav-custom overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                 <div class="flex-shrink-0 flex items-center gap-1 md:gap-2 cursor-pointer group" onclick="window.scrollTo(0,0)">
@@ -203,11 +209,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[1050px] md:min-h-[1100px] flex flex-col justify-center pt-24 pb-20 overflow-hidden">
+    <section class="relative min-h-[1050px] md:min-h-[1100px] flex flex-col justify-center pt-24 pb-20 overflow-hidden w-full">
         <div class="absolute inset-0 bg-gradient-to-br from-[#b3404a] via-[#d66d75] to-[#fb923c] z-0"></div>
         <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
         
-        <div class="absolute top-28 right-2 md:top-36 md:right-8 z-40 animate-fade-up scale-[0.6] md:scale-100 origin-top-right" style="animation-delay: 1s;">
+        <!-- Floating Login Button -->
+        <div class="absolute top-28 right-4 md:top-36 md:right-8 z-40 animate-fade-up scale-[0.6] md:scale-100 origin-top-right">
             <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(212,175,55,0.5)]">
                 <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-white to-jaipur-gold rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
                 <div class="relative px-2 py-1 md:px-4 md:py-1.5 bg-jaipur-pink rounded-full flex items-center gap-1 md:gap-2 z-10 transition-colors duration-300 group-hover:bg-black">
@@ -217,20 +224,20 @@
             </button>
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0 z-10">
+        <div class="absolute bottom-0 left-0 right-0 z-10 overflow-hidden">
             <svg viewBox="0 0 1440 100" fill="none" class="w-full h-auto text-jaipur-sand fill-current">
                 <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path>
             </svg>
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 mt-4 md:mt-16">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 mt-4 md:mt-16 overflow-hidden">
             <div class="inline-flex items-center gap-2 px-6 py-2 border border-white/20 rounded-full bg-transparent mb-8 animate-fade-up">
                 <span class="text-white font-bold tracking-[0.3em] text-[10px] md:text-xs uppercase font-luxury">The Pink City Startup Hub</span>
             </div>
             
             <h1 class="mb-2 leading-tight text-white drop-shadow-sm animate-fade-up" style="animation-delay: 0.2s;">
-                <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-none">Build Your Dream</span>
-                <span class="block font-heading font-bold text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold via-white to-jaipur-gold mt-1 pb-4">in Jaipur</span>
+                <span class="block font-heading font-bold text-3xl sm:text-5xl md:text-8xl lg:text-9xl leading-none break-words">Build Your Dream</span>
+                <span class="block font-heading font-bold text-3xl sm:text-5xl md:text-8xl lg:text-9xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold via-white to-jaipur-gold mt-1 pb-4">in Jaipur</span>
             </h1>
             
             <p class="text-sm md:text-xl text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed font-professional font-medium tracking-wide animate-fade-up px-4" style="animation-delay: 0.4s;">
@@ -266,30 +273,30 @@
                 </div>
             </div>
 
-            <!-- UPDATED: Trust Strips (Ek ke niche ek 3 patti) -->
+            <!-- Trust Strips with Helping Hand Icon and Yellow Color -->
             <div class="mt-12 flex flex-col gap-3 max-w-4xl mx-auto px-2 animate-fade-up" style="animation-delay: 1s;">
                 <!-- Strip 1: Govt Grants -->
                 <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group">
                     <i class="fa-solid fa-award text-jaipur-gold text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <div class="flex flex-row items-center gap-2 overflow-hidden w-full">
-                        <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2">Govt Grants:</span>
-                        <span class="text-white/90 text-[9px] md:text-xs font-medium tracking-wide truncate">Secure up to ₹10 Lakhs in non-dilutive state funding through iStart Rajasthan.</span>
+                    <div class="flex flex-row items-center gap-2 overflow-hidden w-full text-left">
+                        <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2 shrink-0">Govt Grants:</span>
+                        <span class="text-white/90 text-[9px] md:text-xs font-medium tracking-wide truncate">Secure up to ₹10 Lakhs in grants through iStart Rajasthan.</span>
                     </div>
                 </div>
-                <!-- Strip 2: Free Incubation -->
+                <!-- Strip 2: Free Incubation (Icon Updated to Handshake-Angle & Color to Yellow) -->
                 <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group">
-                    <i class="fa-solid fa-rocket text-jaipur-pink text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <div class="flex flex-row items-center gap-2 overflow-hidden w-full">
-                        <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2">Free Incubation:</span>
-                        <span class="text-white/90 text-[9px] md:text-xs font-medium tracking-wide truncate">Get high-tech workspace, technical workshops, and cloud credits at zero cost.</span>
+                    <i class="fa-solid fa-handshake-angle text-yellow-400 text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
+                    <div class="flex flex-row items-center gap-2 overflow-hidden w-full text-left">
+                        <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2 shrink-0">Free Incubation:</span>
+                        <span class="text-white/90 text-[9px] md:text-xs font-medium tracking-wide truncate">Get workspace, workshops, and community support at zero cost.</span>
                     </div>
                 </div>
-                <!-- Strip 3: Legal Support -->
+                <!-- Strip 3: Legal Support (Icon: Document/Contract) -->
                 <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group">
-                    <i class="fa-solid fa-scale-balanced text-green-300 text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
-                    <div class="flex flex-row items-center gap-2 overflow-hidden w-full">
-                        <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2">Legal Support:</span>
-                        <span class="text-white/90 text-[9px] md:text-xs font-medium tracking-wide truncate">Remove bureaucratic hurdles with free CA and legal help for GST & Registration.</span>
+                    <i class="fa-solid fa-file-contract text-green-300 text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
+                    <div class="flex flex-row items-center gap-2 overflow-hidden w-full text-left">
+                        <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2 shrink-0">Legal Support:</span>
+                        <span class="text-white/90 text-[9px] md:text-xs font-medium tracking-wide truncate">Free CA help for GST and Company registration.</span>
                     </div>
                 </div>
             </div>
@@ -309,7 +316,7 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about-us" class="pt-20 pb-12 bg-jaipur-sand relative overflow-hidden border-t border-jaipur-gold/10">
+    <section id="about-us" class="pt-20 pb-12 bg-jaipur-sand relative overflow-hidden border-t border-jaipur-gold/10 w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                  <div class="w-full lg:w-1/2 relative group">
@@ -384,7 +391,7 @@
                                 <div class="flex-1 min-w-0">
                                     <h4 class="font-luxury font-black text-jaipur-deep text-base md:text-xl tracking-[0.15em] uppercase group-hover:text-jaipur-gold transition-colors leading-none mb-0">Mentorship</h4>
                                     <p class="text-[10px] md:text-xs text-gray-700 font-professional leading-relaxed font-medium mt-0.5">
-                                        Our mentorship program connects you with industry veterans and successful founders who provide one-on-one guidance. Navigate the complexities of building a startup with expert advice and avoid common entrepreneurial pitfalls.
+                                        Our mentorship program connects you with industry veterans and successful founders who provide one-on-one guidance. Navigate the complexities of building a startup with expert advice.
                                     </p>
                                 </div>
                              </div>
@@ -396,7 +403,7 @@
                                 <div class="flex-1 min-w-0">
                                     <h4 class="font-luxury font-black text-jaipur-deep text-base md:text-xl tracking-[0.15em] uppercase group-hover:text-jaipur-pink transition-colors leading-none mb-0">Founder Community</h4>
                                     <p class="text-[10px] md:text-xs text-gray-700 font-professional leading-relaxed font-medium mt-0.5">
-                                        Join a vibrant ecosystem of over 2,000+ like-minded entrepreneurs. Share ideas, collaborate on projects, and build lifelong professional relationships within the Pink City's most active and supportive startup network.
+                                        Join a vibrant ecosystem of over 2,000+ like-minded entrepreneurs. Share ideas, collaborate on projects, and build professional relationships within the Pink City.
                                     </p>
                                 </div>
                              </div>
@@ -408,10 +415,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-jaipur-blue pt-20 pb-10 text-white border-t-4 border-jaipur-gold relative overflow-hidden">
+    <footer class="bg-jaipur-blue pt-20 pb-10 text-white border-t-4 border-jaipur-gold relative overflow-hidden w-full">
         <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 200px;"></div>
         
-        <div class="flex flex-col items-center text-center gap-12 relative z-10">
+        <div class="flex flex-col items-center text-center gap-12 relative z-10 w-full">
              <div class="w-full flex flex-col items-center">
                 <div class="px-4 mb-4">
                     <h1 class="font-heading font-bold text-5xl md:text-7xl text-white tracking-wide leading-none">
@@ -420,7 +427,7 @@
                 </div>
                 
                 <!-- Tagline Strip (Edge-to-Edge) -->
-                <div class="w-screen bg-white/5 backdrop-blur-sm border-t border-b border-white/5 py-4 flex justify-center mt-2 relative">
+                <div class="w-full bg-white/5 backdrop-blur-sm border-t border-b border-white/5 py-4 flex justify-center mt-2 relative">
                     <p class="font-professional font-black text-jaipur-gold text-[10px] md:text-xs uppercase tracking-[0.4em] leading-tight px-4">
                         The Pink City Startup Hub
                     </p>
@@ -445,7 +452,7 @@
                 </div>
              </div>
              
-             <!-- Contact Info -->
+             <!-- Contact Info Strip (Seamless) -->
              <div class="w-full flex flex-col items-center px-4">
                 <h4 class="font-luxury font-bold mb-4 text-jaipur-gold uppercase text-[10px] tracking-[0.4em] opacity-50">Contact Info</h4>
                 <div class="border border-white/10 bg-jaipur-blue py-3 px-6 md:px-12 rounded-full w-full max-w-2xl flex flex-row items-center justify-center gap-4 sm:gap-10 md:gap-16 font-professional overflow-hidden">
