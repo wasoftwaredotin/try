@@ -75,17 +75,6 @@
         }
         .btn-royal:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(214, 109, 117, 0.5); }
 
-        /* Smooth Infinite Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: flex;
-            width: max-content;
-            animation: marquee 30s linear infinite; 
-        }
-        
         .rajasthani-pattern {
             background-color: #FFF0F5;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -137,24 +126,8 @@
     <!-- Master Wrapper for preventing any accidental horizontal scroll on mobile -->
     <div class="relative w-full max-w-full overflow-x-hidden flex flex-col min-h-screen">
 
-        <!-- Info Strip: FIXED & SEAMLESS INFINITE LOOP -->
-        <div class="fixed top-0 left-0 w-full max-w-full h-8 bg-jaipur-gold text-jaipur-deep border-b border-black/10 overflow-hidden z-[60] flex items-center shadow-sm box-border">
-            <div class="animate-marquee whitespace-nowrap flex items-center font-bold text-[10px] md:text-xs tracking-widest uppercase font-luxury">
-                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2026</span>
-                <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>650+ Startups Supported</span>
-                <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
-                <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 7340337074</span>
-                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Join Rajasthan's Biggest Startup Hub</span>
-                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2026</span>
-                <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>650+ Startups Supported</span>
-                <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
-                <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 7340337074</span>
-                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Join Rajasthan's Biggest Startup Hub</span>
-            </div>
-        </div>
-
         <!-- Navigation: ABSOLUTE (Scrolls with page) -->
-        <nav class="absolute top-8 left-0 w-full max-w-full z-50 transition-all duration-500 nav-custom overflow-hidden">
+        <nav class="absolute top-4 left-0 w-full max-w-full z-50 transition-all duration-500 nav-custom overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                     <!-- Logo -->
