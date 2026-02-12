@@ -135,6 +135,18 @@
             position: relative;
             overscroll-behavior-x: none;
         }
+
+        /* Custom Keyframes for the Login Button Activity */
+        @keyframes border-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .animate-border-flow {
+            background-size: 200% 200%;
+            animation: border-flow 2s ease infinite;
+        }
     </style>
 </head>
 <body class="font-body rajasthani-pattern text-jaipur-deep antialiased selection:bg-jaipur-gold selection:text-white relative w-full overflow-x-hidden max-w-full">
@@ -161,13 +173,12 @@
         </div>
 
         <!-- Navigation: ABSOLUTE (Scrolls with page) -->
-        <!-- Fixed: Removed overflow-hidden from nav to allow mobile menu to show -->
-        <nav class="absolute top-8 left-0 w-full max-w-full z-50 transition-all duration-500 nav-custom">
+        <nav class="absolute top-8 left-0 w-full max-w-full z-50 transition-all duration-500 nav-custom overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <!-- Change justify-end to justify-between to place Login left and Menu right -->
                 <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                     
-                    <!-- LEFT SIDE: LOGIN BUTTON INSIDE NAV -->
+                    <!-- LEFT SIDE: RESTORED SPINNING LOGIN BUTTON -->
                     <div class="flex-shrink-0 flex items-center">
                         <button onclick="toggleLoginModal()" class="group relative p-[2px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_-5px_rgba(212,175,55,0.5)]">
                             <div class="absolute inset-0 bg-gradient-to-r from-jaipur-gold via-white to-jaipur-gold rounded-full animate-spin-slow opacity-80 group-hover:opacity-100"></div>
@@ -313,14 +324,15 @@
                     </div>
                 </div>
 
-                <!-- Trust Strips with Fixed Headings and Scrolling Description -->
-                <div class="mt-12 flex flex-col gap-3 max-w-4xl mx-auto px-2 animate-fade-up box-border" style="animation-delay: 1s;">
+                <!-- Trust Strips with Fixed Headings and Scrolling Description (FIXED OVERFLOW with w-0) -->
+                <div class="mt-12 flex flex-col gap-3 max-w-4xl mx-auto px-2 animate-fade-up box-border w-full max-w-[95vw] sm:max-w-full overflow-hidden" style="animation-delay: 1s;">
                     <!-- Strip 1: Govt Grants -->
-                    <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group w-full max-w-full h-12">
+                    <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group w-full max-w-full h-12 overflow-hidden">
                         <i class="fa-solid fa-award text-jaipur-gold text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
                         <div class="flex flex-row items-center gap-2 overflow-hidden w-full text-left flex-1 min-w-0 h-full">
                             <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2 shrink-0 z-10 bg-transparent">Govt Grants:</span>
-                            <div class="relative flex-1 overflow-hidden h-full flex items-center">
+                            <!-- ADDED w-0 HERE -->
+                            <div class="relative flex-1 w-0 overflow-hidden h-full flex items-center min-w-0">
                                 <div class="animate-marquee-strip whitespace-nowrap flex items-center">
                                     <span class="mr-8 text-white/90 text-[9px] md:text-xs font-medium tracking-wide">Secure up to ₹10 Lakhs in equity-free grants through iStart Rajasthan • Apply for Seed Funding & Viability Gap Funding • 100% Digital Process • Special incentives for Women & Student Entrepreneurs.</span>
                                     <span class="mr-8 text-white/90 text-[9px] md:text-xs font-medium tracking-wide">Secure up to ₹10 Lakhs in equity-free grants through iStart Rajasthan • Apply for Seed Funding & Viability Gap Funding • 100% Digital Process • Special incentives for Women & Student Entrepreneurs.</span>
@@ -329,11 +341,12 @@
                         </div>
                     </div>
                     <!-- Strip 2: Free Incubation -->
-                    <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group w-full max-w-full h-12">
+                    <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group w-full max-w-full h-12 overflow-hidden">
                         <i class="fa-solid fa-handshake-angle text-yellow-400 text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
                         <div class="flex flex-row items-center gap-2 overflow-hidden w-full text-left flex-1 min-w-0 h-full">
                             <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2 shrink-0 z-10 bg-transparent">Free Incubation:</span>
-                            <div class="relative flex-1 overflow-hidden h-full flex items-center">
+                            <!-- ADDED w-0 HERE -->
+                            <div class="relative flex-1 w-0 overflow-hidden h-full flex items-center min-w-0">
                                 <div class="animate-marquee-strip whitespace-nowrap flex items-center">
                                     <span class="mr-8 text-white/90 text-[9px] md:text-xs font-medium tracking-wide">Access premium co-working space at Techno Hub Jaipur • Get $5000+ worth of AWS/Azure Cloud Credits • Weekly 1-on-1 Mentorship with Industry Veterans • High-speed Internet & Conference Rooms.</span>
                                     <span class="mr-8 text-white/90 text-[9px] md:text-xs font-medium tracking-wide">Access premium co-working space at Techno Hub Jaipur • Get $5000+ worth of AWS/Azure Cloud Credits • Weekly 1-on-1 Mentorship with Industry Veterans • High-speed Internet & Conference Rooms.</span>
@@ -342,11 +355,12 @@
                         </div>
                     </div>
                     <!-- Strip 3: Legal Support -->
-                    <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group w-full max-w-full h-12">
+                    <div class="flex items-center gap-3 p-3 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-md hover:bg-white/20 transition duration-300 group w-full max-w-full h-12 overflow-hidden">
                         <i class="fa-solid fa-file-contract text-green-300 text-lg shrink-0 group-hover:scale-110 transition-transform"></i>
                         <div class="flex flex-row items-center gap-2 overflow-hidden w-full text-left flex-1 min-w-0 h-full">
                             <span class="text-white text-[10px] md:text-xs font-bold uppercase whitespace-nowrap border-r border-white/20 pr-2 shrink-0 z-10 bg-transparent">Legal Support:</span>
-                            <div class="relative flex-1 overflow-hidden h-full flex items-center">
+                            <!-- ADDED w-0 HERE -->
+                            <div class="relative flex-1 w-0 overflow-hidden h-full flex items-center min-w-0">
                                 <div class="animate-marquee-strip whitespace-nowrap flex items-center">
                                     <span class="mr-8 text-white/90 text-[9px] md:text-xs font-medium tracking-wide">Free CA assistance for Company Incorporation (Pvt Ltd/LLP) • Complete GST Registration & Monthly Filing Support • Intellectual Property (IP) & Trademark Guidance • Startup India Recognition Support.</span>
                                     <span class="mr-8 text-white/90 text-[9px] md:text-xs font-medium tracking-wide">Free CA assistance for Company Incorporation (Pvt Ltd/LLP) • Complete GST Registration & Monthly Filing Support • Intellectual Property (IP) & Trademark Guidance • Startup India Recognition Support.</span>
