@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="scroll-smooth overflow-x-hidden" style="max-width: 100vw; overflow-x: hidden;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -121,18 +121,19 @@
         }
 
         html, body {
-            overflow-x: hidden;
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
             width: 100%;
             position: relative;
         }
     </style>
 </head>
-<body class="font-body rajasthani-pattern text-jaipur-deep antialiased selection:bg-jaipur-gold selection:text-white relative w-full">
+<body class="font-body rajasthani-pattern text-jaipur-deep antialiased selection:bg-jaipur-gold selection:text-white relative w-full overflow-x-hidden max-w-[100vw]">
 
     <div class="fixed inset-0 mandana-bg pointer-events-none z-0"></div>
 
     <!-- Info Strip: FIXED & SEAMLESS INFINITE LOOP -->
-    <div class="fixed top-0 left-0 w-full h-8 bg-jaipur-gold text-jaipur-deep border-b border-black/10 overflow-hidden z-[60] flex items-center shadow-sm">
+    <div class="fixed top-0 left-0 w-full max-w-[100vw] h-8 bg-jaipur-gold text-jaipur-deep border-b border-black/10 overflow-hidden z-[60] flex items-center shadow-sm box-border">
         <div class="animate-marquee whitespace-nowrap flex items-center font-bold text-[10px] md:text-xs tracking-widest uppercase font-luxury">
             <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Registrations Open for Batch 2026</span>
             <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>650+ Startups Supported</span>
@@ -148,7 +149,7 @@
     </div>
 
     <!-- Navigation: ABSOLUTE (Scrolls with page) -->
-    <nav class="absolute top-8 left-0 w-full z-50 transition-all duration-500 nav-custom overflow-hidden">
+    <nav class="absolute top-8 left-0 w-full max-w-[100vw] z-50 transition-all duration-500 nav-custom overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                 <!-- Logo -->
@@ -189,7 +190,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden bg-white border-t-4 border-jaipur-gold absolute w-full shadow-2xl transition-all duration-300 top-16 md:top-20 left-0 z-40">
+        <div id="mobile-menu" class="hidden bg-white border-t-4 border-jaipur-gold absolute w-full max-w-[100vw] shadow-2xl transition-all duration-300 top-16 md:top-20 left-0 z-40">
             <button onclick="toggleLoginModal()" class="block w-full text-left px-6 py-6 text-jaipur-deep font-luxury text-lg md:text-xl font-bold tracking-[0.2em] hover:bg-jaipur-bg border-b border-gray-100 group transition-all">
                 <i class="fa-solid fa-lock mr-4 text-jaipur-gold group-hover:text-jaipur-deep transition-all scale-110"></i> LOGIN
             </button>
@@ -215,7 +216,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[1050px] md:min-h-[1100px] flex flex-col justify-center pt-24 pb-20 overflow-hidden w-full">
+    <section class="relative min-h-[1050px] md:min-h-[1100px] flex flex-col justify-center pt-24 pb-20 overflow-hidden w-full max-w-[100vw]">
         <div class="absolute inset-0 bg-gradient-to-br from-[#b3404a] via-[#d66d75] to-[#fb923c] z-0"></div>
         <div class="absolute inset-0 opacity-10 z-0" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
         
@@ -322,7 +323,7 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about-us" class="pt-20 pb-12 bg-jaipur-sand relative overflow-hidden border-t border-jaipur-gold/10 w-full">
+    <section id="about-us" class="pt-20 pb-12 bg-jaipur-sand relative overflow-hidden border-t border-jaipur-gold/10 w-full max-w-[100vw]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                  <div class="w-full lg:w-1/2 relative group">
@@ -421,7 +422,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-jaipur-blue pt-20 pb-10 text-white border-t-4 border-jaipur-gold relative overflow-hidden w-full">
+    <footer class="bg-jaipur-blue pt-20 pb-10 text-white border-t-4 border-jaipur-gold relative overflow-hidden w-full max-w-[100vw]">
         <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 200px;"></div>
         
         <div class="flex flex-col items-center text-center gap-12 relative z-10 w-full">
