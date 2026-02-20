@@ -105,9 +105,15 @@
             will-change: transform; 
         }
 
+        /* Jaipuri Floral/Mandana Pattern for Popup */
+        .popup-floral-pattern {
+            background-color: #FFF0F5;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23d66d75' stroke-width='1' fill='none' opacity='0.25'%3E%3Ccircle cx='30' cy='30' r='8' /%3E%3Ccircle cx='30' cy='30' r='3' fill='%23d4af37' opacity='0.6'/%3E%3Cpath d='M 30 22 Q 34 12 30 4 Q 26 12 30 22 Z' fill='%23d66d75' opacity='0.3'/%3E%3Cpath d='M 30 38 Q 34 48 30 56 Q 26 48 30 38 Z' fill='%23d66d75' opacity='0.3'/%3E%3Cpath d='M 22 30 Q 12 26 4 30 Q 12 34 22 30 Z' fill='%23d66d75' opacity='0.3'/%3E%3Cpath d='M 38 30 Q 48 26 56 30 Q 48 34 38 30 Z' fill='%23d66d75' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
         .rajasthani-pattern {
             background-color: #FFF0F5;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         .mandana-menu-pattern {
@@ -204,7 +210,7 @@
 
         <!-- Navigation -->
         <nav class="absolute top-8 left-0 w-full max-w-full z-40 transition-all duration-500 nav-custom">
-            <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 relative">
                 <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="https://wa.me/917340337074" target="_blank" class="relative inline-flex h-10 md:h-12 overflow-hidden rounded-full p-[2px] group focus:outline-none">
@@ -224,7 +230,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="flex items-center gap-2 md:gap-3 z-[200] flex-shrink-0">
+                    <div class="flex items-center gap-2 md:gap-3 z-[200] flex-shrink-0 relative">
                         <div class="relative">
                             <button onclick="toggleLoginModal()" id="login-btn-trigger" class="relative inline-flex h-9 md:h-10 overflow-hidden rounded-full p-[2px] focus:outline-none group hover:scale-105 transition-all duration-300 shadow-[0_0_20px_-5px_rgba(212,175,55,0.5)]">
                                 <span class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_70%,#ffffff_90%,#d4af37_100%)]"></span>
@@ -255,37 +261,52 @@
                                 <span id="line3" class="w-full h-[2px] bg-white rounded-full transition-all duration-300"></span>
                             </div>
                         </button>
-                    </div>
-                </div>
-            </div>
-            <div id="mobile-menu" class="hidden fixed top-0 right-0 z-[180] h-full w-80 max-w-[85vw] bg-gradient-to-br from-white via-[#FFF0F5] to-[#fce7f3] shadow-2xl border-l-4 border-jaipur-gold overflow-y-auto transition-all duration-300">
-                <div class="absolute inset-0 mandana-menu-pattern opacity-[0.12] pointer-events-none blur-[1px]"></div>
-                <div class="relative z-10 flex flex-col p-6 pt-32 space-y-4">
-                    <button onclick="scrollToAbout()" class="group flex items-center w-full p-4 bg-white/70 backdrop-blur-md rounded-xl shadow-sm border border-jaipur-pink/10 hover:border-jaipur-pink hover:shadow-md transition-all active:scale-95 text-left">
-                        <div class="w-10 h-10 rounded-full bg-jaipur-gold/10 flex items-center justify-center text-jaipur-gold group-hover:bg-jaipur-gold group-hover:text-white transition-colors duration-300"><i class="fa-solid fa-scroll text-sm"></i></div>
-                        <div class="flex flex-col ml-4"><span class="text-jaipur-deep font-luxury font-bold text-sm tracking-wider uppercase">About Us</span><span class="text-[10px] text-gray-500 font-professional">Our Vision & Mission</span></div>
-                    </button>
-                    <a href="https://wa.me/917340337074" target="_blank" class="group flex items-center w-full p-4 bg-[#25D366]/10 rounded-xl shadow-sm border border-[#25D366]/20 hover:bg-[#25D366] transition-all active:scale-95">
-                        <div class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#25D366] transition-colors duration-300 shadow-sm"><i class="fa-brands fa-whatsapp text-lg"></i></div>
-                        <div class="flex flex-col ml-4 text-left"><span class="text-gray-800 font-luxury font-bold text-sm tracking-wider uppercase group-hover:text-white">Contact Us</span><span class="text-[10px] text-gray-600 font-professional group-hover:text-white/90">Instant Daily Updates</span></div>
-                    </a>
-                    <div class="p-5 bg-white/70 backdrop-blur-md rounded-2xl border border-white shadow-sm text-center relative overflow-hidden">
-                        <h4 class="font-luxury font-bold text-jaipur-deep mb-3 uppercase tracking-[0.15em] text-[10px] border-b border-gray-200 pb-2 inline-block">Support Desk</h4>
-                        <div class="space-y-3 font-professional text-xs text-gray-700">
-                            <div class="flex items-center justify-between px-2 py-2 bg-white/50 rounded-lg"><div class="flex items-center gap-2"><i class="fa-solid fa-phone text-jaipur-pink text-[10px]"></i><span class="font-bold">+91 7340337074</span></div><a href="tel:+917340337074" class="text-[9px] text-jaipur-blue underline">Call</a></div>
-                            <div class="flex items-center justify-between px-2 py-2 bg-white/50 rounded-lg"><div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-jaipur-gold text-[10px]"></i><span class="font-bold">info@startupjaipur.in</span></div><a href="mailto:info@startupjaipur.in" class="text-[9px] text-jaipur-blue underline">Email</a></div>
-                        </div>
-                    </div>
-                    <div class="p-5 bg-white/70 backdrop-blur-md rounded-2xl border border-white shadow-sm relative overflow-hidden">
-                        <h4 class="font-luxury font-bold text-jaipur-deep mb-3 uppercase tracking-[0.15em] text-[10px] border-b border-gray-200 pb-2 inline-block text-center w-full">Our Address</h4>
-                        <div class="space-y-3 font-professional text-xs text-gray-700">
-                             <div class="flex flex-col gap-2">
-                                <div class="flex items-start gap-2 text-left"><i class="fa-solid fa-location-dot text-jaipur-deep mt-1 shrink-0"></i><span class="font-medium leading-tight">Startup Jaipur Office Mahal RD,<br>Sitapura Industrial Area Jaipur</span></div>
-                                <a href="https://maps.google.com/?q=Sitapura+Industrial+Area+Jaipur" target="_blank" class="mt-2 block w-full py-2.5 bg-jaipur-blue text-white text-center rounded-lg text-[9px] font-bold uppercase tracking-widest hover:bg-black transition-colors"><i class="fa-solid fa-map-location-dot mr-1"></i> Open Map</a>
+
+                        <!-- Compact Mobile Menu Popup -->
+                        <div id="mobile-menu" class="hidden absolute top-full right-0 mt-3 z-[250] w-[260px] md:w-[280px] bg-[#FFF0F5] rounded-3xl p-3 shadow-2xl border-t-4 border-jaipur-gold animate-fade-up overflow-hidden">
+                            <!-- Phool/Mandana design -->
+                            <div class="absolute inset-0 popup-floral-pattern pointer-events-none rounded-3xl"></div>
+                            
+                            <div class="relative z-10 flex flex-col space-y-2">
+                                <!-- About Us -->
+                                <button onclick="scrollToAbout()" class="group flex items-center w-full p-2 bg-white/80 backdrop-blur-sm hover:bg-white rounded-xl border border-jaipur-pink/20 hover:border-jaipur-pink/50 transition-all text-left shadow-sm h-[42px]">
+                                    <div class="w-7 h-7 rounded-full bg-jaipur-gold/10 flex items-center justify-center text-jaipur-gold shrink-0"><i class="fa-solid fa-scroll text-[9px]"></i></div>
+                                    <div class="flex items-center ml-3"><span class="text-jaipur-deep font-luxury font-bold text-[11px] uppercase tracking-widest">About Us</span></div>
+                                </button>
+                                
+                                <!-- Contact / WhatsApp -->
+                                <a href="https://wa.me/917340337074" target="_blank" class="group flex items-center w-full p-2 bg-[#25D366]/10 hover:bg-[#25D366] rounded-xl border border-[#25D366]/20 transition-all shadow-sm h-[42px]">
+                                    <div class="w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center text-white shrink-0"><i class="fa-brands fa-whatsapp text-xs"></i></div>
+                                    <div class="flex items-center ml-3 text-left"><span class="text-gray-800 font-luxury font-bold text-[11px] uppercase tracking-widest group-hover:text-white">Contact Us</span></div>
+                                </a>
+
+                                <!-- Support Desk -->
+                                <div class="p-2 bg-white/70 backdrop-blur-sm rounded-xl border border-jaipur-gold/30 text-center shadow-sm relative overflow-hidden">
+                                    <h4 class="font-luxury font-bold text-jaipur-deep mb-1.5 uppercase text-[8px] border-b border-jaipur-gold/20 pb-1 relative z-10">Support Desk</h4>
+                                    <div class="space-y-1.5 relative z-10">
+                                        <div class="flex items-center justify-between px-2 py-1.5 bg-white/70 rounded-lg border border-jaipur-pink/20 shadow-sm">
+                                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-jaipur-pink text-[8px]"></i><span class="font-heading italic font-bold text-[10px] text-jaipur-deep tracking-wide">+91 7340337074</span></div>
+                                        </div>
+                                        <div class="flex items-center justify-between px-2 py-1.5 bg-white/70 rounded-lg border border-jaipur-pink/20 shadow-sm">
+                                            <div class="flex items-center gap-1.5"><i class="fa-solid fa-envelope text-jaipur-gold text-[8px]"></i><span class="font-heading italic font-bold text-[10px] text-jaipur-deep tracking-wide">info@startupjaipur.in</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div class="p-2 bg-white/50 backdrop-blur-sm rounded-xl border border-jaipur-gold/30 text-center shadow-sm relative overflow-hidden">
+                                    <div class="absolute -bottom-4 -left-4 text-jaipur-pink/10 text-4xl"><i class="fa-solid fa-bahai"></i></div>
+                                    <h4 class="font-luxury font-bold text-jaipur-deep mb-1.5 uppercase text-[8px] border-b border-jaipur-gold/20 pb-1 relative z-10">Our Address</h4>
+                                    <div class="flex flex-col gap-1.5 relative z-10">
+                                        <div class="flex items-start gap-1 text-left"><i class="fa-solid fa-location-dot text-jaipur-deep mt-0.5 text-[8px] shrink-0"></i><span class="font-heading italic font-bold text-[10px] text-jaipur-deep tracking-wide leading-tight">Mahal RD, Sitapura Ind. Area, Jaipur</span></div>
+                                        <a href="https://maps.google.com/?q=Sitapura+Industrial+Area+Jaipur" target="_blank" class="mt-1 block w-full py-1.5 bg-gradient-to-r from-jaipur-blue to-black text-white text-center rounded text-[7px] font-bold uppercase tracking-widest hover:shadow-md transition-all">Open Map</a>
+                                    </div>
+                                </div>
+
+                                <div class="text-center pt-1"><p class="text-[6px] text-jaipur-deep/60 uppercase font-bold tracking-widest">Made with ❤️ in Jaipur</p></div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-center pt-4 pb-8"><p class="text-[8px] text-jaipur-deep/20 mt-1 uppercase">Made with ❤️ in Jaipur</p></div>
                 </div>
             </div>
         </nav>
@@ -330,14 +351,15 @@
                     <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition group"><div class="text-3xl md:text-5xl font-heading font-bold text-jaipur-gold mb-1">24/7</div><div class="text-[10px] md:text-xs uppercase tracking-widest text-white/80">Support</div></div>
                 </div>
 
-                <!-- UPDATED TRUST STRIPS: Solid Pink-100 Background -->
-                <div class="mt-32 pt-8 flex flex-col w-[90%] md:max-w-4xl mx-auto animate-fade-up relative z-10 overflow-visible" style="animation-delay: 1s;">
+                <!-- UPDATED TRUST STRIPS: Reduced Gap -->
+                <div class="mt-12 md:mt-16 pt-4 flex flex-col w-[90%] md:max-w-4xl mx-auto animate-fade-up relative z-10 overflow-visible" style="animation-delay: 1s;">
                     
                     <!-- Strip 1: Govt Grants -->
                     <div class="relative w-full mb-14 overflow-visible">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-pink-100 border border-orange-200 px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
-                            <i class="fa-solid fa-award text-orange-600 text-[9px] md:text-[10px]"></i>
-                            <span class="font-luxury font-bold uppercase tracking-widest text-[8px] md:text-[9px] text-orange-600">Govt Grants</span>
+                        <!-- Solid Pink background (bg-pink-100) hides the line -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-pink-100 border border-pink-200 px-4 py-1 rounded-full shadow-lg whitespace-nowrap">
+                            <i class="fa-solid fa-award text-orange-600 text-[10px] md:text-[12px]"></i>
+                            <span class="font-luxury font-black uppercase tracking-widest text-[9px] md:text-[11px] text-orange-600">Govt Grants</span>
                         </div>
                         <div class="overflow-hidden border border-white/30 rounded-2xl shadow-xl bg-white/10 backdrop-blur-md h-12 flex items-center">
                             <div class="animate-marquee-strip whitespace-nowrap flex items-center font-luxury font-bold uppercase tracking-widest text-[9px] md:text-xs text-white">
@@ -349,9 +371,10 @@
 
                     <!-- Strip 2: Free Incubation -->
                     <div class="relative w-full mb-14 overflow-visible">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-pink-100 border border-pink-300 px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
-                            <i class="fa-solid fa-handshake-angle text-jaipur-pink text-[9px] md:text-[10px]"></i>
-                            <span class="font-luxury font-bold uppercase tracking-widest text-[8px] md:text-[9px] text-jaipur-pink">Free Incubation</span>
+                        <!-- Solid Pink background (bg-pink-100) hides the line -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-pink-100 border border-pink-200 px-4 py-1 rounded-full shadow-lg whitespace-nowrap">
+                            <i class="fa-solid fa-handshake-angle text-pink-600 text-[10px] md:text-[12px]"></i>
+                            <span class="font-luxury font-black uppercase tracking-widest text-[9px] md:text-[11px] text-pink-600">Free Incubation</span>
                         </div>
                         <div class="overflow-hidden border border-white/30 rounded-2xl shadow-xl bg-white/10 backdrop-blur-md h-12 flex items-center">
                             <div class="animate-marquee-strip whitespace-nowrap flex items-center font-luxury font-bold uppercase tracking-widest text-[9px] md:text-xs text-white">
@@ -363,9 +386,10 @@
 
                     <!-- Strip 3: Legal Support -->
                     <div class="relative w-full mb-6 overflow-visible">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-pink-100 border border-green-200 px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
-                            <i class="fa-solid fa-file-contract text-green-600 text-[9px] md:text-[10px]"></i>
-                            <span class="font-luxury font-bold uppercase tracking-widest text-[8px] md:text-[9px] text-green-600">Legal Support</span>
+                        <!-- Solid Pink background (bg-pink-100) hides the line -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-pink-100 border border-pink-200 px-4 py-1 rounded-full shadow-lg whitespace-nowrap">
+                            <i class="fa-solid fa-file-contract text-green-600 text-[10px] md:text-[12px]"></i>
+                            <span class="font-luxury font-black uppercase tracking-widest text-[9px] md:text-[11px] text-green-600">Legal Support</span>
                         </div>
                         <div class="overflow-hidden border border-white/30 rounded-2xl shadow-xl bg-white/10 backdrop-blur-md h-12 flex items-center">
                             <div class="animate-marquee-strip whitespace-nowrap flex items-center font-luxury font-bold uppercase tracking-widest text-[9px] md:text-xs text-white">
@@ -453,10 +477,12 @@
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><circle r="3" fill="#8B0000" stroke="#d4af37" stroke-width="0.5"/><path d="M0,-3 Q2,-6 0,-8 Q-2,-6 0,-3" fill="#e29587" /><line x1="0" y1="8" x2="0" y2="15" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="15" r="1.5" fill="#8B0000" /></g></svg></div>
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><path d="M-5,-5 L5,-5 L0,5 Z" fill="#d4af37" stroke="#8B0000" stroke-width="0.5" /><circle cx="0" cy="12" r="1.5" fill="#1a2a3a" stroke="#d4af37" stroke-width="0.5" /></g></svg></div>
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><circle r="3" fill="#8B0000" stroke="#d4af37" stroke-width="0.5"/><path d="M0,-3 Q2,-6 0,-8 Q-2,-6 0,-3" fill="#e29587" /><line x1="0" y1="8" x2="0" y2="15" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="15" r="1.5" fill="#8B0000" /></g></svg></div>
-                 <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><path d="M-5,-5 L5,-5 L0,5 Z" fill="#d4af37" stroke="#8B0000" stroke-width="0.5" /><circle cx="0" cy="12" r="1.5" fill="#1a2a3a" stroke="#d4af37" stroke-width="0.5" /></g></svg></div>
+                 <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><path d="M-5,-5 L5,-5 L0,5 Z" fill="#d4af37" stroke="#8B0000" stroke-width="0.5" /><circle cx="0" cy="-2" r="1.5" fill="#d66d75" /><line x1="-3" y1="-5" x2="-3" y2="8" stroke="#d4af37" stroke-width="0.5" /><circle cx="-3" cy="8" r="1.2" fill="#8B0000" /><line x1="3" y1="-5" x2="3" y2="8" stroke="#d4af37" stroke-width="0.5" /><circle cx="3" cy="8" r="1.2" fill="#8B0000" /><line x1="0" y1="5" x2="0" y2="12" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="12" r="1.5" fill="#1a2a3a" stroke="#d4af37" stroke-width="0.5" /></g></svg></div>
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><circle r="3" fill="#8B0000" stroke="#d4af37" stroke-width="0.5"/><path d="M0,-3 Q2,-6 0,-8 Q-2,-6 0,-3" fill="#e29587" /><line x1="0" y1="8" x2="0" y2="15" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="15" r="1.5" fill="#8B0000" /></g></svg></div>
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><path d="M-5,-5 L5,-5 L0,5 Z" fill="#d4af37" stroke="#8B0000" stroke-width="0.5" /><circle cx="0" cy="12" r="1.5" fill="#1a2a3a" stroke="#d4af37" stroke-width="0.5" /></g></svg></div>
                  <!-- More units to guarantee full width -->
+                 <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><circle r="3" fill="#8B0000" stroke="#d4af37" stroke-width="0.5"/><path d="M0,-3 Q2,-6 0,-8 Q-2,-6 0,-3" fill="#e29587" /><line x1="0" y1="8" x2="0" y2="15" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="15" r="1.5" fill="#8B0000" /></g></svg></div>
+                 <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><path d="M-5,-5 L5,-5 L0,5 Z" fill="#d4af37" stroke="#8B0000" stroke-width="0.5" /><circle cx="0" cy="12" r="1.5" fill="#1a2a3a" stroke="#d4af37" stroke-width="0.5" /></g></svg></div>
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><circle r="3" fill="#8B0000" stroke="#d4af37" stroke-width="0.5"/><path d="M0,-3 Q2,-6 0,-8 Q-2,-6 0,-3" fill="#e29587" /><line x1="0" y1="8" x2="0" y2="15" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="15" r="1.5" fill="#8B0000" /></g></svg></div>
                  <div class="relative w-16 sm:w-24 shrink-0"><svg viewBox="0 0 100 60" class="w-full h-auto drop-shadow-sm overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="18" stroke="#d4af37" stroke-width="1.5" /><circle cx="0" cy="9" r="1.5" fill="#166534" /><path d="M-4,18 Q0,25 4,18 L0,12 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="25" r="1.5" fill="#d4af37" /></g><path d="M0,0 C20,0 30,30 50,30 C70,30 80,0 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 30)"><path d="M-5,-5 L5,-5 L0,5 Z" fill="#d4af37" stroke="#8B0000" stroke-width="0.5" /><circle cx="0" cy="12" r="1.5" fill="#1a2a3a" stroke="#d4af37" stroke-width="0.5" /></g></svg></div>
             </div>
@@ -636,6 +662,10 @@
             if (loginBtn && !loginBtn.contains(event.target) && !authModal.contains(event.target)) {
                 if (!authModal.classList.contains('hidden')) { toggleLoginModal(); }
             }
+            
+            if (menuBtn && !menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+                if (!mobileMenu.classList.contains('hidden')) { toggleMobileMenu(); }
+            }
         }
 
         function toggleMobileMenu() {
@@ -644,13 +674,13 @@
                 l1.classList.add('rotate-45', 'translate-y-[6px]');
                 l2.classList.add('opacity-0', 'scale-0');
                 l3.classList.add('-rotate-45', '-translate-y-[6px]');
-                document.body.style.overflow = 'hidden';
+                // Scroll lock hataya gaya
                 lineSpans.forEach(span => { span.classList.remove('bg-white'); span.classList.add('bg-[#8B0000]'); });
             } else {
                 l1.classList.remove('rotate-45', 'translate-y-[6px]');
                 l2.classList.remove('opacity-0', 'scale-0');
                 l3.classList.remove('-rotate-45', '-translate-y-[6px]');
-                document.body.style.overflow = 'auto';
+                // Scroll unlock hataya gaya
                 lineSpans.forEach(span => { span.classList.remove('bg-[#8B0000]'); span.classList.add('bg-white'); });
             }
         }
